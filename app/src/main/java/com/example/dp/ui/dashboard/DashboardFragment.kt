@@ -1,42 +1,30 @@
 package com.example.dp.ui.dashboard
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import com.example.dp.core.ui.BaseFragment
+import com.example.dp.core.utils.ErrorCodes
+import com.example.dp.core.utils.appViewModels
+import com.example.dp.core.utils.observeState
 import com.example.dp.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class DashboardFragment : BaseFragment<FragmentDashboardBinding>(
+    FragmentDashboardBinding::inflate
+) {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private val viewModel: DashboardViewModel by appViewModels()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
-
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun subscribeUI() {
+        observeState(
+            dataFlow = viewModel.name,
+            useLoadingData = true,
+            onSuccess = { homeModel ->
+                binding.textDashboard.text = homeModel.title
+            },
+            onFailure = { errorCode, messageID, throwable ->
+                binding.textDashboard.text = when (errorCode) {
+                    ErrorCodes.STATE_NO_DATA -> "no data found"
+                    else                     -> "unknown error"
+                }
+            }
+        )
     }
 }

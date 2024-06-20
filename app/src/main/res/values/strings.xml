@@ -3,4 +3,10 @@
     <string name = "title_home">Home</string>
     <string name = "title_dashboard">Dashboard</string>
     <string name = "title_notifications">Notifications</string>
+    <string name = "title_activity_load">DP</string>
+    <string name = "initialization_text">Инициализация…</string>
+
+    <string name = "error_corrupted_data">Data is corrupted or outdated</string>
+    <string name = "error_no_data">No data found</string>
+    <string name = "error_unknown">Something went wrong</string>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name = "NavigationMenu">
+        <item name = "android:background">@color/cardview_shadow_end_color</item>
+    </style>
+</resources>
