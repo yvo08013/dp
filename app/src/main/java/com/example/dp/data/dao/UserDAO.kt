@@ -6,6 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.example.dp.data.model.UserEntity
+import com.example.dp.data.model.pojo.UserPOJO
 
 
 @Dao
@@ -24,9 +25,21 @@ interface UserDAO {
     )
     suspend fun getUser(ID: Int): UserEntity
 
+    @Query(
+        "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.ID} = :ID"
+    )
+    suspend fun getUserPOJO(ID: Int): UserPOJO
+
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createUser(user: UserEntity): Long
 
     @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun updateUser(user: UserEntity)
+
+    @Query(
+        "DELETE FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.ID} = :ID"
+    )
+    suspend fun deleteUser(ID: Int)
 }

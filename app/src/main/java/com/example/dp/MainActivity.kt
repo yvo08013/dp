@@ -22,7 +22,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
                 when (destination.id) {
                     R.id.f_home,
                     R.id.f_dashboard,
-                    R.id.f_notifications -> binding.navView.isVisible = true
+                    R.id.f_profile -> binding.navView.isVisible = true
 
                     else                 -> binding.navView.isVisible = false
                 }

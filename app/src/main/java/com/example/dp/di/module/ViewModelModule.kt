@@ -1,9 +1,9 @@
 package com.example.dp.di.module
 
 import androidx.lifecycle.ViewModel
-import com.example.dp.ui.dashboard.DashboardViewModel
+import com.example.dp.ui.dashboard.ScheduleViewModel
 import com.example.dp.ui.home.HomeViewModel
-import com.example.dp.ui.notifications.NotificationsViewModel
+import com.example.dp.ui.notifications.ProfileViewModel
 import com.example.dp.ui.sign_in.SignInViewModel
 import com.example.dp.ui.sign_up.SignUpViewModel
 import dagger.Binds
@@ -33,13 +33,13 @@ abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(DashboardViewModel::class)
-    abstract fun bindsDashboardViewModel(viewModel: DashboardViewModel): ViewModel
+    @ViewModelKey(ScheduleViewModel::class)
+    abstract fun bindsScheduleViewModel(viewModel: ScheduleViewModel): ViewModel
 
     @Binds
     @IntoMap
-    @ViewModelKey(NotificationsViewModel::class)
-    abstract fun bindsNotificationsViewModel(viewModel: NotificationsViewModel): ViewModel
+    @ViewModelKey(ProfileViewModel::class)
+    abstract fun bindsProfileViewModel(viewModel: ProfileViewModel): ViewModel
 
     @Binds
     @IntoMap

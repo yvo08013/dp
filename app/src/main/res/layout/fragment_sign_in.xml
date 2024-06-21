@@ -38,12 +38,12 @@
                 android:hint = "@string/login_hint"
                 android:maxLines = "1"
                 android:textSize = "16sp"
-                app:layout_constraintBottom_toTopOf = "@+id/password_title"
+                app:layout_constraintBottom_toTopOf = "@+id/absence_title"
                 app:layout_constraintTop_toBottomOf = "@+id/login_title"
                 tools:layout_editor_absoluteX = "16dp" />
 
             <TextView
-                android:id = "@+id/password_title"
+                android:id = "@+id/absence_title"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginHorizontal = "16dp"
@@ -62,7 +62,7 @@
                 android:maxLines = "1"
                 android:textSize = "16sp"
                 app:layout_constraintBottom_toBottomOf = "parent"
-                app:layout_constraintTop_toBottomOf = "@+id/password_title"
+                app:layout_constraintTop_toBottomOf = "@+id/absence_title"
                 tools:layout_editor_absoluteX = "16dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
