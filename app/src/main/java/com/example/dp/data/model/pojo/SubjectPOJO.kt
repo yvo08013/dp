@@ -53,5 +53,5 @@ data class SubjectPOJO(
         entityColumn = AttendanceEntity.Columns.SUBJECT_ID,
         entity = AttendanceEntity::class
     )
-    val attendanceEntity: List<AttendanceEntity>
+    val attendanceList: List<AttendanceEntity>
 )
