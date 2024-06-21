@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.example.dp.core.ui.BaseActivity
 import com.example.dp.core.utils.appComponent
-import com.example.dp.data.model.TestEntity
 import com.example.dp.databinding.ActivityInitializationBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -33,13 +32,7 @@ class InitializationActivity : BaseActivity<ActivityInitializationBinding>(
         delay(1000) //fake loading timer
 
         appComponent.dataBase.apply {
-            testDAO.addData(
-                listOf(
-                    TestEntity(1, "home"),
-                    TestEntity(2, "dashboard"),
-                    TestEntity(3, "notifications"),
-                )
-            )
+            clearAllTables() //nuke table after each launch to avoid conflicts while testing
         }
     }
 }

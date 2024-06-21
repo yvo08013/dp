@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.example.dp.data.model.UserEntity
 
 
@@ -25,4 +26,7 @@ interface UserDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createUser(user: UserEntity): Long
+
+    @Update(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun updateUser(user: UserEntity)
 }
