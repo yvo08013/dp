@@ -5,8 +5,26 @@
     <string name = "title_notifications">Notifications</string>
     <string name = "title_activity_load">DP</string>
     <string name = "initialization_text">Инициализация…</string>
+    <string name = "title_auth">Auth</string>
+    <string name = "title_sign_up">SignUp</string>
+    <string name = "title_sign_in">SignIn</string>
 
     <string name = "error_corrupted_data">Data is corrupted or outdated</string>
     <string name = "error_no_data">No data found</string>
     <string name = "error_unknown">Something went wrong</string>
+
+    <string name = "login_title">Имя</string>
+    <string name = "login_hint">Введите имя</string>
+    <string name = "password_title">Пароль</string>
+    <string name = "password_hint">Введите пароль</string>
+    <string name = "confirm_button_text">Продолжить</string>
+    <string name = "sign_out_button_text">Выйти</string>
+    <string name = "sign_in_button_text">Войти</string>
+    <string name = "sign_up_button_text">Зарегестрироваться</string>
+
+    <string name = "error_incorrect_password">Неверный пароль</string>
+    <string name = "error_user_exists">Пользователь с данным именем уже существует</string>
+
+    <string name = "choice_admin_text">Преподаватель</string>
+    <string name = "choice_user_text">Студент</string>
 </resources>

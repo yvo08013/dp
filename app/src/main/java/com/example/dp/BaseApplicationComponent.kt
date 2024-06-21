@@ -1,6 +1,7 @@
 package com.example.dp
 
 import android.app.Application
+import com.example.dp.core.utils.PrefUtils
 import com.example.dp.data.DataBase
 import com.example.dp.di.BaseViewModelFactory
 import com.example.dp.di.module.BaseApplicationModule
@@ -29,4 +30,6 @@ interface BaseApplicationComponent {
     fun viewModelsFactory(): BaseViewModelFactory
 
     val dataBase: DataBase
+
+    val prefUtils: PrefUtils
 }

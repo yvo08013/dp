@@ -9,7 +9,13 @@
         android:id = "@+id/f_home"
         android:name = "com.example.dp.ui.home.HomeFragment"
         android:label = "@string/title_home"
-        tools:layout = "@layout/fragment_home" />
+        tools:layout = "@layout/fragment_home">
+        <action
+            android:id = "@+id/action_f_home_to_f_auth"
+            app:destination = "@id/f_auth"
+            app:popUpTo = "@id/f_auth"
+            app:popUpToInclusive = "false" />
+    </fragment>
 
     <fragment
         android:id = "@+id/f_dashboard"
@@ -22,4 +28,41 @@
         android:name = "com.example.dp.ui.notifications.NotificationsFragment"
         android:label = "@string/title_notifications"
         tools:layout = "@layout/fragment_notifications" />
+
+    <fragment
+        android:id = "@+id/f_sign_up"
+        android:name = "com.example.dp.ui.sign_up.SignUpFragment"
+        android:label = "@string/title_sign_up"
+        tools:layout = "@layout/fragment_sign_up">
+        <action
+            android:id = "@+id/action_f_sign_up_to_f_home"
+            app:destination = "@id/f_home"
+            app:popUpTo = "@id/f_auth"
+            app:popUpToInclusive = "true" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_sign_in"
+        android:name = "com.example.dp.ui.sign_in.SignInFragment"
+        android:label = "@string/title_sign_up"
+        tools:layout = "@layout/fragment_sign_in">
+        <action
+            android:id = "@+id/action_f_sign_in_to_f_home"
+            app:destination = "@id/f_home"
+            app:popUpTo = "@id/f_auth"
+            app:popUpToInclusive = "true" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_auth"
+        android:name = "com.example.dp.ui.auth.AuthFragment"
+        android:label = "@string/title_auth"
+        tools:layout = "@layout/fragment_auth">
+        <action
+            android:id = "@+id/action_f_auth_to_f_sign_up"
+            app:destination = "@id/f_sign_up" />
+        <action
+            android:id = "@+id/action_f_auth_to_f_sign_in"
+            app:destination = "@id/f_sign_in" />
+    </fragment>
 </navigation>

@@ -5,7 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.dp.data.dao.TestDAO
+import com.example.dp.data.dao.UserDAO
 import com.example.dp.data.model.TestEntity
+import com.example.dp.data.model.UserEntity
 
 
 @Database(
@@ -13,10 +15,13 @@ import com.example.dp.data.model.TestEntity
     version = 1,
     entities = [
         TestEntity::class,
+        UserEntity::class,
     ]
 )
 abstract class DataBase : RoomDatabase() {
     abstract val testDAO: TestDAO
+
+    abstract val userDAO: UserDAO
 
     companion object {
         private const val DB_NAME = "data_base"

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
+        android:layout_marginVertical = "16dp"
+        app:layout_constraintBottom_toTopOf = "@+id/btn_confirm"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id = "@+id/constraintLayoutInitialCompanySelection"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content">
+
+            <TextView
+                android:id = "@+id/login_title"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "16dp"
+                android:text = "@string/login_title"
+                app:layout_constraintBottom_toTopOf = "@+id/login_input"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toTopOf = "parent"
+                app:layout_constraintVertical_chainStyle = "packed" />
+
+            <EditText
+                android:id = "@+id/login_input"
+                android:layout_width = "match_parent"
+                android:layout_height = "50dp"
+                android:layout_marginHorizontal = "16dp"
+                android:hint = "@string/login_hint"
+                android:maxLines = "1"
+                android:textSize = "16sp"
+                app:layout_constraintBottom_toTopOf = "@+id/password_title"
+                app:layout_constraintTop_toBottomOf = "@+id/login_title"
+                tools:layout_editor_absoluteX = "16dp" />
+
+            <TextView
+                android:id = "@+id/password_title"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "16dp"
+                android:layout_marginTop = "20dp"
+                android:text = "@string/password_title"
+                app:layout_constraintBottom_toTopOf = "@+id/password_input"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/login_input" />
+
+            <EditText
+                android:id = "@+id/password_input"
+                android:layout_width = "match_parent"
+                android:layout_height = "50dp"
+                android:layout_marginHorizontal = "16dp"
+                android:hint = "@string/password_hint"
+                android:maxLines = "1"
+                android:textSize = "16sp"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/password_title"
+                tools:layout_editor_absoluteX = "16dp" />
+
+            <RadioGroup
+                android:id = "@+id/user_type_choice_group"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:layout_marginHorizontal = "16dp"
+                android:layout_marginTop = "20dp"
+                android:orientation = "horizontal"
+                app:layout_constraintTop_toBottomOf = "@+id/password_input">
+
+                <RadioButton
+                    android:id = "@+id/choice_user"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:layout_weight = "1"
+                    android:checked = "true"
+                    android:text = "@string/choice_user_text" />
+
+                <RadioButton
+                    android:id = "@+id/choice_admin"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "match_parent"
+                    android:layout_weight = "1"
+                    android:text = "@string/choice_admin_text" />
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id = "@+id/btn_confirm"
+        style = "@style/BasePrimaryButton"
+        android:layout_width = "match_parent"
+        android:layout_height = "50dp"
+        android:layout_marginHorizontal = "16dp"
+        android:layout_marginBottom = "16dp"
+        android:enabled = "false"
+        android:text = "@string/confirm_button_text"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

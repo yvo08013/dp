@@ -4,6 +4,8 @@ import androidx.lifecycle.ViewModel
 import com.example.dp.ui.dashboard.DashboardViewModel
 import com.example.dp.ui.home.HomeViewModel
 import com.example.dp.ui.notifications.NotificationsViewModel
+import com.example.dp.ui.sign_in.SignInViewModel
+import com.example.dp.ui.sign_up.SignUpViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
@@ -38,4 +40,14 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(NotificationsViewModel::class)
     abstract fun bindsNotificationsViewModel(viewModel: NotificationsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(SignInViewModel::class)
+    abstract fun bindsSignInViewModel(viewModel: SignInViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(SignUpViewModel::class)
+    abstract fun bindsSignUpViewModel(viewModel: SignUpViewModel): ViewModel
 }

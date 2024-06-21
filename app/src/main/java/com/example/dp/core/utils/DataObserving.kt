@@ -11,6 +11,7 @@ import com.example.dp.data.State.Utils.filterState
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.retryWhen
 import kotlinx.coroutines.launch
 
 
@@ -42,13 +43,15 @@ inline fun <T> Fragment.observeState(
     observe(Lifecycle.State.STARTED) {
         dataFlow.filterState(useLoadingData).collect { state ->
             when {
-                state is State.Initial -> {
+                state is State.Initial                                           -> {
                     onStart()
                     initializationCompleted = false
                 }
-                state is State.Failure -> {
+
+                state is State.Failure                                           -> {
                     onFailure(state.errorCode!!, state.messageID!!, state.throwable!!)
                 }
+
                 state.data != null && (state is State.Success || useLoadingData) -> {
                     onSuccess(state.data)
                     if (!initializationCompleted) {
@@ -102,21 +105,20 @@ inline fun <localInT, modelT> fetchLocal(
     crossinline mapDelegate: (localInT) -> modelT
 ) = flow {
     emit(State.Initial())
+    when (val source = dataProvider()) {
+        is DataSource.Local     -> {
+            emit(mapData(source.data, ErrorCodes.STATE_LOCAL_MAPPING, mapDelegate))
+        }
 
-    try {
-        when (val source = dataProvider()) {
-            is DataSource.Local     -> {
-                emit(mapData(source.data, ErrorCodes.STATE_LOCAL_MAPPING, mapDelegate))
-            }
-            is DataSource.LocalFlow -> {
-                source.flow.collect { data ->
-                    emit(mapData(data, ErrorCodes.STATE_LOCAL_MAPPING, mapDelegate))
-                }
+        is DataSource.LocalFlow -> {
+            source.flow.collect { data ->
+                emit(mapData(data, ErrorCodes.STATE_LOCAL_MAPPING, mapDelegate))
             }
         }
-    } catch (e: Exception) {
-        emit(State.Failure(ErrorCodes.STATE_LOCAL_UNKNOWN, R.string.error_unknown, e))
     }
+}.retryWhen { cause, attempt ->
+    emit(State.Failure(ErrorCodes.STATE_LOCAL_UNKNOWN, R.string.error_unknown, cause))
+    true
 }
 
 suspend inline fun <inT, outT> mapData(
