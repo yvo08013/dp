@@ -10,6 +10,7 @@ import dagger.android.AndroidInjectionModule
         ViewModelModule::class,
         ContextModule::class,
         RoomModule::class,
+        UtilsModule::class,
         AndroidInjectionModule::class
     ]
 )

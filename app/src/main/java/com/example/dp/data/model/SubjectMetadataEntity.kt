@@ -6,7 +6,6 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 
-//TODO create predefined pool of available subjects
 @Entity(
     tableName = SubjectMetadataEntity.TABLE_NAME,
     indices = [Index(value = arrayOf(SubjectMetadataEntity.Columns.NAME), unique = true)]
@@ -18,10 +17,14 @@ data class SubjectMetadataEntity(
 
     @ColumnInfo(name = Columns.NAME)
     val name: String,
+
+    @ColumnInfo(name = Columns.TEACHER_ID)
+    val teacherID: Int,
 ) {
     object Columns {
         const val ID = "id"
         const val NAME = "name"
+        const val TEACHER_ID = "teacher_id"
     }
 
     companion object {

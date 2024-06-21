@@ -6,7 +6,6 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 
-//TODO create predefined pool of available teachers
 @Entity(
     tableName = TeacherMetadataEntity.TABLE_NAME,
     indices = [Index(value = arrayOf(TeacherMetadataEntity.Columns.NAME), unique = true)]
@@ -18,10 +17,14 @@ data class TeacherMetadataEntity(
 
     @ColumnInfo(name = Columns.NAME)
     val name: String,
+
+    @ColumnInfo(name = Columns.SUBJECT_ID)
+    val subjectID: Int,
 ) {
     object Columns {
         const val ID = "id"
         const val NAME = "name"
+        const val SUBJECT_ID = "subject_id"
     }
 
     companion object {

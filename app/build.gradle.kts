@@ -63,4 +63,6 @@ dependencies {
 
     implementation(libs.coroutines)
     implementation(libs.coroutinesCore)
+
+    implementation(libs.gson)
 }
