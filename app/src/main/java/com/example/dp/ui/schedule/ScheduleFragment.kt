@@ -1,4 +1,4 @@
-package com.example.dp.ui.dashboard
+package com.example.dp.ui.schedule
 
 import com.example.dp.core.ui.BaseFragment
 import com.example.dp.core.utils.appViewModels

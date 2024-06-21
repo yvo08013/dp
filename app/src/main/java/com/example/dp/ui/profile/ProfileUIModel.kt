@@ -1,8 +1,8 @@
-package com.example.dp.ui.notifications
+package com.example.dp.ui.profile
 
 import com.example.dp.data.model.GroupEntity
 import com.example.dp.data.model.pojo.UserPOJO
-import com.example.dp.ui.notifications.ProfileUIModel.GroupUIModel.Companion.toUIModel
+import com.example.dp.ui.profile.ProfileUIModel.GroupUIModel.Companion.toUIModel
 
 
 data class ProfileUIModel(

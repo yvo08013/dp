@@ -1,4 +1,4 @@
-package com.example.dp.ui.notifications
+package com.example.dp.ui.profile
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,7 +7,7 @@ import com.example.dp.core.utils.PrefUtils
 import com.example.dp.core.utils.fetchLocal
 import com.example.dp.data.State
 import com.example.dp.data.dao.UserDAO
-import com.example.dp.ui.notifications.ProfileUIModel.Companion.toUIModel
+import com.example.dp.ui.profile.ProfileUIModel.Companion.toUIModel
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.shareIn

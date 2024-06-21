@@ -1,9 +1,9 @@
 package com.example.dp.di.module
 
 import androidx.lifecycle.ViewModel
-import com.example.dp.ui.dashboard.ScheduleViewModel
+import com.example.dp.ui.schedule.ScheduleViewModel
 import com.example.dp.ui.home.HomeViewModel
-import com.example.dp.ui.notifications.ProfileViewModel
+import com.example.dp.ui.profile.ProfileViewModel
 import com.example.dp.ui.sign_in.SignInViewModel
 import com.example.dp.ui.sign_up.SignUpViewModel
 import dagger.Binds

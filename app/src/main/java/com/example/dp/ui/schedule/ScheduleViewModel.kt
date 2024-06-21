@@ -1,4 +1,4 @@
-package com.example.dp.ui.dashboard
+package com.example.dp.ui.schedule
 
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject

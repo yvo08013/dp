@@ -1,4 +1,4 @@
-package com.example.dp.ui.notifications
+package com.example.dp.ui.profile
 
 import androidx.navigation.fragment.findNavController
 import com.example.dp.core.ui.BaseFragment

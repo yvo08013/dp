@@ -13,13 +13,13 @@
 
     <fragment
         android:id = "@+id/f_dashboard"
-        android:name = "com.example.dp.ui.dashboard.ScheduleFragment"
+        android:name = "com.example.dp.ui.schedule.ScheduleFragment"
         android:label = "@string/title_schedule"
         tools:layout = "@layout/fragment_schedule" />
 
     <fragment
         android:id = "@+id/f_profile"
-        android:name = "com.example.dp.ui.notifications.ProfileFragment"
+        android:name = "com.example.dp.ui.profile.ProfileFragment"
         android:label = "@string/title_profile"
         tools:layout = "@layout/fragment_profile">
         <action
