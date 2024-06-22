@@ -115,6 +115,9 @@
         <argument
             android:name = "userName"
             app:argType = "string" />
+        <action
+            android:id = "@+id/action_f_user_absence_to_f_subject"
+            app:destination = "@id/f_subject" />
     </fragment>
 
     <fragment
@@ -125,6 +128,19 @@
         <action
             android:id = "@+id/action_f_group_list_to_f_group"
             app:destination = "@id/f_group" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_subject"
+        android:name = "com.example.dp.ui.subject.SubjectFragment"
+        android:label = "@string/title_subject"
+        tools:layout = "@layout/fragment_subject">
+        <argument
+            android:name = "subjectID"
+            app:argType = "integer" />
+        <action
+            android:id = "@+id/action_f_subject_to_f_user_info"
+            app:destination = "@id/f_user_info" />
     </fragment>
 
 </navigation>

@@ -9,10 +9,17 @@ import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
 import com.example.dp.data.model.pojo.AbsencePOJO
+import com.example.dp.data.model.pojo.SubjectPOJO
 
 
 @Dao
 interface ScheduleDAO {
+
+    @Query(
+        "SELECT * FROM ${SubjectEntity.TABLE_NAME} WHERE " +
+        "${SubjectEntity.Columns.ID} = :ID"
+    )
+    suspend fun getSubject(ID: Int): SubjectPOJO
 
     @Query("SELECT * FROM ${SubjectMetadataEntity.TABLE_NAME}")
     suspend fun getSubjectsMeta(): List<SubjectMetadataEntity>

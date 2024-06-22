@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Relation
 import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.AttendanceEntity
+import com.example.dp.data.model.GroupEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
@@ -53,5 +54,12 @@ data class SubjectPOJO(
         entityColumn = AttendanceEntity.Columns.SUBJECT_ID,
         entity = AttendanceEntity::class
     )
-    val attendanceList: List<AttendanceEntity>
+    val attendanceList: List<AttendanceEntity>,
+
+    @Relation(
+        parentColumn = SubjectEntity.Columns.GROUP_ID,
+        entityColumn = GroupEntity.Columns.ID,
+        entity = GroupEntity::class
+    )
+    val group: GroupPOJO
 )

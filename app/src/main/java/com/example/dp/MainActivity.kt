@@ -28,6 +28,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
                 }
             }
 
+            appComponent.prefUtils.userID = PrefUtils.DEFAULT_USER_ID_VALUE //TODO remove after tests
             if (appComponent.prefUtils.userID == PrefUtils.DEFAULT_USER_ID_VALUE) {
                 val inflater = navController.navInflater
                 val graph = inflater.inflate(R.navigation.mobile_navigation)

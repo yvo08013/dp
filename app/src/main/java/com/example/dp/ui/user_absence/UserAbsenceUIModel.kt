@@ -9,6 +9,7 @@ import java.util.Date
 data class UserAbsenceUIModel(
     val ID: Int,
     val date: String,
+    val subjectID: Int,
     val subjectName: String,
     val teacherName: String,
 ) : AppViewHolderModel {
@@ -20,6 +21,7 @@ data class UserAbsenceUIModel(
     override fun areContentsTheSame(other: AppViewHolderModel) =
         other is UserAbsenceUIModel &&
         this.date == other.date &&
+        this.subjectID == other.subjectID &&
         this.subjectName == other.subjectName &&
         this.teacherName == other.teacherName
 
@@ -30,6 +32,7 @@ data class UserAbsenceUIModel(
             return UserAbsenceUIModel(
                 ID = id!!,
                 date = format.format(Date(subject.date)),
+                subjectID = subject.id!!,
                 subjectName = subject.subjectMetadata.name,
                 teacherName = subject.teacherMetadata.name,
             )

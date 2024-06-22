@@ -19,7 +19,9 @@ class UserAbsenceFragment : BaseFragment<FragmentUserAbsenceBinding>(
     private val args: UserAbsenceFragmentArgs by navArgs()
 
     private val onItemClickListener: (UserAbsenceUIModel) -> Unit = { absence ->
-
+        findNavController().navigate(
+            UserAbsenceFragmentDirections.actionFUserAbsenceToFSubject(absence.subjectID)
+        )
     }
 
     private val recyclerAdapter: AppListAdapter by appListAdapter(

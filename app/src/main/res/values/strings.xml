@@ -9,6 +9,7 @@
     <string name = "title_group">Group</string>
     <string name = "title_user_info">UserInfo</string>
     <string name = "title_user_absence">UserAbsence</string>
+    <string name = "title_subject">Subject</string>
     <string name = "title_group_list">GroupList</string>
     <string name = "title_sign_up">SignUp</string>
     <string name = "title_sign_in">SignIn</string>
@@ -44,4 +45,7 @@
     <string name = "group_join_button_text">Вступить</string>
     <string name = "group_password_hint">Введите пароль</string>
     <string name = "no_absence_found_text">У данного пользователя не было пропущено ни одно занятие в текущем семестре.</string>
+
+    <string name = "subject_date_title">Дата и время события</string>
+    <string name = "subject_members_title">Участники</string>
 </resources>

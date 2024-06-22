@@ -1,19 +1,19 @@
-package com.example.dp.ui.group
+package com.example.dp.ui.subject
 
 import com.example.dp.core.ui.adapter.appAdapterDelegate
-import com.example.dp.databinding.RvItemGroupMembersBinding
+import com.example.dp.databinding.RvItemSubjectMemberBinding
 
 
-fun groupMemberAdapterDelegate(
-    onItemClickListener: (GroupUIModel.UserUIModel) -> Unit
+fun subjectUserAdapterDelegate(
+    onItemClickListener: (SubjectUIModel.UserUIModel) -> Unit
 ) = appAdapterDelegate(
-    inflate = RvItemGroupMembersBinding::inflate,
+    inflate = RvItemSubjectMemberBinding::inflate,
     onInit = { binding, itemProvider ->
         binding.root.setOnClickListener { onItemClickListener(itemProvider()) }
     },
     onBind = { binding, item, _ ->
         binding.userName.text = item.name
         binding.userStatus.text = item.status
-        binding.userAbsence.text = item.absence
+        binding.userAttendance.text = item.attendance
     }
 )

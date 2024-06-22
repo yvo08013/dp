@@ -41,7 +41,7 @@ class InitializationActivity : BaseActivity<ActivityInitializationBinding>(
         delay(1000) //fake loading timer
 
         appComponent.dataBase.apply {
-            clearAllTables() //nuke table after each launch to avoid conflicts while testing
+            clearAllTables()  //TODO remove after tests
 
             val jsonLoader = JSONLoader()
             val gson = GsonBuilder().create()
