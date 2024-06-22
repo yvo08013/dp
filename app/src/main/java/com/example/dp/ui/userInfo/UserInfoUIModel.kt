@@ -1,11 +1,11 @@
-package com.example.dp.ui.profile
+package com.example.dp.ui.userInfo
 
 import com.example.dp.data.model.GroupEntity
 import com.example.dp.data.model.pojo.UserPOJO
-import com.example.dp.ui.profile.ProfileUIModel.GroupUIModel.Companion.toUIModel
+import com.example.dp.ui.userInfo.UserInfoUIModel.GroupUIModel.Companion.toUIModel
 
 
-data class ProfileUIModel(
+data class UserInfoUIModel(
     val ID: Int,
     val name: String,
     val status: UserStatus,
@@ -33,9 +33,9 @@ data class ProfileUIModel(
     }
 
     companion object {
-        fun UserPOJO.toUIModel(): ProfileUIModel {
-            return ProfileUIModel(
-                ID =  id!!,
+        fun UserPOJO.toUIModel(): UserInfoUIModel {
+            return UserInfoUIModel(
+                ID = id!!,
                 name = name,
                 status = when (userType) {
                     1    -> UserStatus.STUDENT

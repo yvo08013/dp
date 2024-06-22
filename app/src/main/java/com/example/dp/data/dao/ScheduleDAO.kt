@@ -8,6 +8,7 @@ import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
+import com.example.dp.data.model.pojo.AbsencePOJO
 
 
 @Dao
@@ -30,4 +31,10 @@ interface ScheduleDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createAbsence(subject: AbsenceEntity): Long
+
+    @Query(
+        "SELECT * FROM ${AbsenceEntity.TABLE_NAME} WHERE " +
+        "${AbsenceEntity.Columns.USER_ID} = :userID"
+    )
+    suspend fun getUserAbsenceList(userID: Int): List<AbsencePOJO>
 }

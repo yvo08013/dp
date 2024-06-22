@@ -1,36 +1,29 @@
-package com.example.dp.ui.profile
+package com.example.dp.ui.userInfo
 
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.dp.core.ui.BaseFragment
-import com.example.dp.core.utils.PrefUtils
-import com.example.dp.core.utils.appComponent
 import com.example.dp.core.utils.appViewModels
 import com.example.dp.core.utils.observeState
-import com.example.dp.databinding.FragmentProfileBinding
+import com.example.dp.databinding.FragmentUserInfoBinding
 
-class ProfileFragment : BaseFragment<FragmentProfileBinding>(
-    FragmentProfileBinding::inflate
+class UserInfoFragment : BaseFragment<FragmentUserInfoBinding>(
+    FragmentUserInfoBinding::inflate
 ) {
-    private val viewModel: ProfileViewModel by appViewModels()
+    private val viewModel: UserInfoViewModel by appViewModels()
+
+    private val args: UserInfoFragmentArgs by navArgs()
 
     override fun initUI() {
-        binding.btnLeave.setOnClickListener {
-            binding.root.context.appComponent.prefUtils.userID = PrefUtils.DEFAULT_USER_ID_VALUE
-            findNavController().navigate(
-                ProfileFragmentDirections.actionFProfileToFAuth()
-            )
+        viewModel.userID = args.userID
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
         }
-        binding.btnDelete.setOnClickListener {
-            viewModel.deleteUser()
-            binding.root.context.appComponent.prefUtils.userID = PrefUtils.DEFAULT_USER_ID_VALUE
-            findNavController().navigate(
-                ProfileFragmentDirections.actionFProfileToFAuth()
-            )
-        }
+
         binding.groupValue.setOnClickListener {
             if (viewModel.userGroupID != null) {
                 findNavController().navigate(
-                    ProfileFragmentDirections.actionFProfileToFGroup(viewModel.userGroupID!!)
+                    UserInfoFragmentDirections.actionFUserInfoToFGroup(viewModel.userGroupID!!)
                 )
             } else {
                 //TODO umplement group list screen
@@ -45,7 +38,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(
             onSuccess = { userModel ->
                 binding.absenceValue.setOnClickListener {
                     findNavController().navigate(
-                        ProfileFragmentDirections.actionFProfileToFUserAbsence(
+                        UserInfoFragmentDirections.actionFUserInfoToFUserAbsence(
                             userModel.ID,
                             userModel.name,
                         )

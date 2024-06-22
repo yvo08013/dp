@@ -7,25 +7,13 @@
     android:layout_marginHorizontal = "16dp"
     tools:context = ".ui.profile.ProfileFragment">
 
-    <TextView
-        android:id = "@+id/title"
-        android:layout_width = "wrap_content"
-        android:layout_height = "wrap_content"
-        android:layout_marginTop = "16dp"
-        android:text = "@string/profile_screen_title"
-        android:textColor = "@color/black"
-        android:textSize = "22sp"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent" />
-
     <ImageView
-        android:id = "@+id/btn_leave"
+        android:id = "@+id/btn_back"
         android:layout_width = "32dp"
         android:layout_height = "32dp"
         android:layout_marginTop = "16dp"
-        android:src = "@drawable/ic_exit"
-        app:layout_constraintEnd_toEndOf = "parent"
+        android:src = "@drawable/ic_back"
+        app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toTopOf = "parent" />
 
 
@@ -87,6 +75,7 @@
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toBottomOf = "@+id/absence_value" />
 
+
     <TextView
         android:id = "@+id/status_value"
         android:layout_width = "match_parent"
@@ -121,17 +110,5 @@
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toBottomOf = "@+id/group_title" />
-
-
-    <com.google.android.material.button.MaterialButton
-        android:id = "@+id/btn_delete"
-        style = "@style/BasePrimaryButton"
-        android:layout_width = "match_parent"
-        android:layout_height = "50dp"
-        android:layout_marginBottom = "16dp"
-        android:text = "@string/delete_button_text"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:layout_constraintStart_toStartOf = "parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

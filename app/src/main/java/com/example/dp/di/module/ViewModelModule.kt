@@ -7,6 +7,8 @@ import com.example.dp.ui.home.HomeViewModel
 import com.example.dp.ui.profile.ProfileViewModel
 import com.example.dp.ui.sign_in.SignInViewModel
 import com.example.dp.ui.sign_up.SignUpViewModel
+import com.example.dp.ui.userInfo.UserInfoViewModel
+import com.example.dp.ui.user_absence.UserAbsenceViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module
@@ -56,4 +58,14 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(GroupViewModel::class)
     abstract fun bindsGroupViewModel(viewModel: GroupViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(UserInfoViewModel::class)
+    abstract fun bindsUserInfoViewModel(viewModel: UserInfoViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(UserAbsenceViewModel::class)
+    abstract fun bindsUserAbsenceViewModel(viewModel: UserAbsenceViewModel): ViewModel
 }

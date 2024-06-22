@@ -30,6 +30,9 @@
         <action
             android:id = "@+id/action_f_profile_to_f_group"
             app:destination = "@id/f_group" />
+        <action
+            android:id = "@+id/action_f_profile_to_f_user_absence"
+            app:destination = "@id/f_user_absence" />
     </fragment>
 
     <fragment
@@ -77,6 +80,38 @@
         <argument
             android:name = "groupID"
             app:argType = "integer" />
+        <action
+            android:id = "@+id/action_f_group_to_f_user_info"
+            app:destination = "@id/f_user_info" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_user_info"
+        android:name = "com.example.dp.ui.userInfo.UserInfoFragment"
+        android:label = "@string/title_user_info"
+        tools:layout = "@layout/fragment_user_info" >
+        <argument
+            android:name = "userID"
+            app:argType = "integer" />
+        <action
+            android:id = "@+id/action_f_user_info_to_f_group"
+            app:destination = "@id/f_group" />
+        <action
+            android:id = "@+id/action_f_user_info_to_f_user_absence"
+            app:destination = "@id/f_user_absence" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_user_absence"
+        android:name = "com.example.dp.ui.user_absence.UserAbsenceFragment"
+        android:label = "@string/title_user_absence"
+        tools:layout = "@layout/fragment_user_absence" >
+        <argument
+            android:name = "userID"
+            app:argType = "integer" />
+        <argument
+            android:name = "userName"
+            app:argType = "string" />
     </fragment>
 
 </navigation>

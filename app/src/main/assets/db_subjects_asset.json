@@ -5,7 +5,7 @@
       "groupID": 1,
       "teacherID": 2,
       "subjectMetadataID": 2,
-      "date": 1718002800,
+      "date": 1718002800000,
       "activityType": 1
     },
     {
@@ -13,7 +13,7 @@
       "groupID": 2,
       "teacherID": 4,
       "subjectMetadataID": 4,
-      "date": 1718002800,
+      "date": 1718002800000,
       "activityType": 2
     },
     {
@@ -21,7 +21,7 @@
       "groupID": 3,
       "teacherID": 6,
       "subjectMetadataID": 6,
-      "date": 1718002800,
+      "date": 1718002800000,
       "activityType": 3
     },
     {
@@ -29,7 +29,7 @@
       "groupID": 1,
       "teacherID": 7,
       "subjectMetadataID": 7,
-      "date": 1718010000,
+      "date": 1718010000000,
       "activityType": 2
     },
     {
@@ -37,7 +37,7 @@
       "groupID": 2,
       "teacherID": 10,
       "subjectMetadataID": 10,
-      "date": 1718010000,
+      "date": 1718010000000,
       "activityType": 1
     },
     {
@@ -45,7 +45,7 @@
       "groupID": 3,
       "teacherID": 8,
       "subjectMetadataID": 8,
-      "date": 1718010000,
+      "date": 1718010000000,
       "activityType": 3
     },
     {
@@ -53,7 +53,7 @@
       "groupID": 1,
       "teacherID": 9,
       "subjectMetadataID": 9,
-      "date": 1718017200,
+      "date": 1718017200000,
       "activityType": 1
     },
     {
@@ -61,7 +61,7 @@
       "groupID": 2,
       "teacherID": 3,
       "subjectMetadataID": 3,
-      "date": 1718017200,
+      "date": 1718017200000,
       "activityType": 3
     },
     {
@@ -69,7 +69,7 @@
       "groupID": 3,
       "teacherID": 5,
       "subjectMetadataID": 5,
-      "date": 1718017200,
+      "date": 1718017200000,
       "activityType": 2
     },
     {
@@ -77,7 +77,7 @@
       "groupID": 1,
       "teacherID": 4,
       "subjectMetadataID": 4,
-      "date": 1718089200,
+      "date": 1718089200000,
       "activityType": 1
     },
     {
@@ -85,7 +85,7 @@
       "groupID": 2,
       "teacherID": 9,
       "subjectMetadataID": 9,
-      "date": 1718089200,
+      "date": 1718089200000,
       "activityType": 2
     },
     {
@@ -93,7 +93,7 @@
       "groupID": 3,
       "teacherID": 10,
       "subjectMetadataID": 10,
-      "date": 1718089200,
+      "date": 1718089200000,
       "activityType": 3
     },
     {
@@ -101,7 +101,7 @@
       "groupID": 1,
       "teacherID": 5,
       "subjectMetadataID": 5,
-      "date": 1718096400,
+      "date": 1718096400000,
       "activityType": 3
     },
     {
@@ -109,7 +109,7 @@
       "groupID": 2,
       "teacherID": 3,
       "subjectMetadataID": 3,
-      "date": 1718096400,
+      "date": 1718096400000,
       "activityType": 1
     },
     {
@@ -117,7 +117,7 @@
       "groupID": 3,
       "teacherID": 2,
       "subjectMetadataID": 2,
-      "date": 1718096400,
+      "date": 1718096400000,
       "activityType": 2
     },
     {
@@ -125,7 +125,7 @@
       "groupID": 1,
       "teacherID": 7,
       "subjectMetadataID": 7,
-      "date": 1718103600,
+      "date": 1718103600000,
       "activityType": 3
     },
     {
@@ -133,7 +133,7 @@
       "groupID": 2,
       "teacherID": 6,
       "subjectMetadataID": 6,
-      "date": 1718103600,
+      "date": 1718103600000,
       "activityType": 2
     },
     {
@@ -141,7 +141,7 @@
       "groupID": 3,
       "teacherID": 8,
       "subjectMetadataID": 8,
-      "date": 1718103600,
+      "date": 1718103600000,
       "activityType": 1
     },
     {
@@ -149,7 +149,7 @@
       "groupID": 1,
       "teacherID": 8,
       "subjectMetadataID": 8,
-      "date": 1718175600,
+      "date": 1718175600000,
       "activityType": 3
     },
     {
@@ -157,7 +157,7 @@
       "groupID": 2,
       "teacherID": 3,
       "subjectMetadataID": 3,
-      "date": 1718175600,
+      "date": 1718175600000,
       "activityType": 2
     },
     {
@@ -165,7 +165,7 @@
       "groupID": 3,
       "teacherID": 1,
       "subjectMetadataID": 1,
-      "date": 1718175600,
+      "date": 1718175600000,
       "activityType": 1
     },
     {
@@ -173,7 +173,7 @@
       "groupID": 1,
       "teacherID": 9,
       "subjectMetadataID": 9,
-      "date": 1718182800,
+      "date": 1718182800000,
       "activityType": 1
     },
     {
@@ -181,7 +181,7 @@
       "groupID": 2,
       "teacherID": 2,
       "subjectMetadataID": 2,
-      "date": 1718182800,
+      "date": 1718182800000,
       "activityType": 3
     },
     {
@@ -189,7 +189,7 @@
       "groupID": 3,
       "teacherID": 10,
       "subjectMetadataID": 10,
-      "date": 1718182800,
+      "date": 1718182800000,
       "activityType": 2
     },
     {
@@ -197,7 +197,7 @@
       "groupID": 1,
       "teacherID": 7,
       "subjectMetadataID": 7,
-      "date": 1718190000,
+      "date": 1718190000000,
       "activityType": 3
     },
     {
@@ -205,7 +205,7 @@
       "groupID": 2,
       "teacherID": 6,
       "subjectMetadataID": 6,
-      "date": 1718190000,
+      "date": 1718190000000,
       "activityType": 2
     },
     {
@@ -213,7 +213,7 @@
       "groupID": 3,
       "teacherID": 5,
       "subjectMetadataID": 5,
-      "date": 1718190000,
+      "date": 1718190000000,
       "activityType": 1
     },
     {
@@ -221,7 +221,7 @@
       "groupID": 1,
       "teacherID": 3,
       "subjectMetadataID": 3,
-      "date": 1718262000,
+      "date": 1718262000000,
       "activityType": 2
     },
     {
@@ -229,7 +229,7 @@
       "groupID": 2,
       "teacherID": 10,
       "subjectMetadataID": 10,
-      "date": 1718262000,
+      "date": 1718262000000,
       "activityType": 3
     },
     {
@@ -237,7 +237,7 @@
       "groupID": 3,
       "teacherID": 2,
       "subjectMetadataID": 2,
-      "date": 1718262000,
+      "date": 1718262000000,
       "activityType": 1
     },
     {
@@ -245,7 +245,7 @@
       "groupID": 1,
       "teacherID": 9,
       "subjectMetadataID": 9,
-      "date": 1718269200,
+      "date": 1718269200000,
       "activityType": 3
     },
     {
@@ -253,7 +253,7 @@
       "groupID": 2,
       "teacherID": 7,
       "subjectMetadataID": 7,
-      "date": 1718269200,
+      "date": 1718269200000,
       "activityType": 1
     },
     {
@@ -261,7 +261,7 @@
       "groupID": 3,
       "teacherID": 5,
       "subjectMetadataID": 5,
-      "date": 1718269200,
+      "date": 1718269200000,
       "activityType": 2
     },
     {
@@ -269,7 +269,7 @@
       "groupID": 1,
       "teacherID": 8,
       "subjectMetadataID": 8,
-      "date": 1718276400,
+      "date": 1718276400000,
       "activityType": 1
     },
     {
@@ -277,7 +277,7 @@
       "groupID": 2,
       "teacherID": 1,
       "subjectMetadataID": 1,
-      "date": 1718276400,
+      "date": 1718276400000,
       "activityType": 2
     },
     {
@@ -285,7 +285,7 @@
       "groupID": 3,
       "teacherID": 4,
       "subjectMetadataID": 4,
-      "date": 1718276400,
+      "date": 1718276400000,
       "activityType": 3
     },
     {
@@ -293,7 +293,7 @@
       "groupID": 1,
       "teacherID": 7,
       "subjectMetadataID": 7,
-      "date": 1718348400,
+      "date": 1718348400000,
       "activityType": 3
     },
     {
@@ -301,7 +301,7 @@
       "groupID": 2,
       "teacherID": 6,
       "subjectMetadataID": 6,
-      "date": 1718348400,
+      "date": 1718348400000,
       "activityType": 2
     },
     {
@@ -309,7 +309,7 @@
       "groupID": 3,
       "teacherID": 9,
       "subjectMetadataID": 9,
-      "date": 1718348400,
+      "date": 1718348400000,
       "activityType": 1
     },
     {
@@ -317,7 +317,7 @@
       "groupID": 1,
       "teacherID": 3,
       "subjectMetadataID": 3,
-      "date": 1718355600,
+      "date": 1718355600000,
       "activityType": 2
     },
     {
@@ -325,7 +325,7 @@
       "groupID": 2,
       "teacherID": 4,
       "subjectMetadataID": 4,
-      "date": 1718355600,
+      "date": 1718355600000,
       "activityType": 3
     },
     {
@@ -333,7 +333,7 @@
       "groupID": 3,
       "teacherID": 10,
       "subjectMetadataID": 10,
-      "date": 1718355600,
+      "date": 1718355600000,
       "activityType": 1
     },
     {
@@ -341,7 +341,7 @@
       "groupID": 1,
       "teacherID": 1,
       "subjectMetadataID": 1,
-      "date": 1718362800,
+      "date": 1718362800000,
       "activityType": 1
     },
     {
@@ -349,7 +349,7 @@
       "groupID": 2,
       "teacherID": 5,
       "subjectMetadataID": 5,
-      "date": 1718362800,
+      "date": 1718362800000,
       "activityType": 3
     },
     {
@@ -357,7 +357,7 @@
       "groupID": 3,
       "teacherID": 2,
       "subjectMetadataID": 2,
-      "date": 1718362800,
+      "date": 1718362800000,
       "activityType": 2
     }
   ]

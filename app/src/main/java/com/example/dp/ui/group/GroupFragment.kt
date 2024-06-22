@@ -18,7 +18,9 @@ class GroupFragment : BaseFragment<FragmentGroupBinding>(
     private val args: GroupFragmentArgs by navArgs()
 
     private val onItemClickListener: (GroupUIModel.UserUIModel) -> Unit = { userModel ->
-        //TODO add navigation to user screen
+        findNavController().navigate(
+            GroupFragmentDirections.actionFGroupToFUserInfo(userModel.ID)
+        )
     }
 
     private val recyclerAdapter: AppListAdapter by appListAdapter(

@@ -7,6 +7,8 @@
     <string name = "initialization_text">Инициализация…</string>
     <string name = "title_auth">Auth</string>
     <string name = "title_group">Group</string>
+    <string name = "title_user_info">UserInfo</string>
+    <string name = "title_user_absence">UserAbsence</string>
     <string name = "title_sign_up">SignUp</string>
     <string name = "title_sign_in">SignIn</string>
 
@@ -31,7 +33,7 @@
     <string name = "choice_user_text">Студент</string>
 
     <string name = "profile_screen_title">Профиль</string>
-    <string name = "absence_count_title">Количество пропусков</string>
+    <string name = "absence_count_title">Количество пропусков (ч.)</string>
     <string name = "user_name_title">Имя</string>
     <string name = "user_status_title">Статус</string>
     <string name = "user_group_title">Группа</string>
@@ -40,4 +42,5 @@
     <string name = "group_members_title">Участники</string>
     <string name = "group_join_button_text">Вступить</string>
     <string name = "group_password_hint">Введите пароль</string>
+    <string name = "no_absence_found_text">У данного пользователя не было пропущено ни одно занятие в текущем семестре.</string>
 </resources>
