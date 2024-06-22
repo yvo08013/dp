@@ -24,5 +24,5 @@ data class GroupPOJO(
         entityColumn = UserEntity.Columns.GROUP_ID,
         entity = UserEntity::class
     )
-    val members: List<UserEntity>
+    val members: List<UserPOJO>
 )

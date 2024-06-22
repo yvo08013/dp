@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
@@ -26,4 +27,7 @@ interface ScheduleDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createSubject(subject: SubjectEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun createAbsence(subject: AbsenceEntity): Long
 }

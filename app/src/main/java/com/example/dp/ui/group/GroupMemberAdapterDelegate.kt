@@ -14,5 +14,6 @@ fun groupMemberAdapterDelegate(
     onBind = { binding, item, _ ->
         binding.userName.text = item.name
         binding.userStatus.text = item.status
+        binding.userAbsence.text = item.absence
     }
 )

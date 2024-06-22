@@ -1,8 +1,8 @@
 package com.example.dp.ui.group
 
 import com.example.dp.core.ui.adapter.AppViewHolderModel
-import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.GroupPOJO
+import com.example.dp.data.model.pojo.UserPOJO
 import com.example.dp.ui.group.GroupUIModel.AdminUIModel.Companion.toAdminUIModel
 import com.example.dp.ui.group.GroupUIModel.UserUIModel.Companion.toUserUIModel
 
@@ -25,7 +25,7 @@ data class GroupUIModel(
         val name: String
     ) {
         companion object {
-            fun UserEntity.toAdminUIModel(): AdminUIModel {
+            fun UserPOJO.toAdminUIModel(): AdminUIModel {
                 return AdminUIModel(
                     ID = id!!,
                     name = name
@@ -37,7 +37,8 @@ data class GroupUIModel(
     data class UserUIModel(
         val ID: Int,
         val name: String,
-        val status: String
+        val status: String,
+        val absence: String
     ) : AppViewHolderModel {
         enum class UserStatus(val displayName: String) {
             TEACHER("Преподаватель"),
@@ -46,7 +47,7 @@ data class GroupUIModel(
         }
 
         companion object {
-            fun UserEntity.toUserUIModel(): UserUIModel {
+            fun UserPOJO.toUserUIModel(): UserUIModel {
                 return UserUIModel(
                     ID = id!!,
                     name = name,
@@ -54,7 +55,8 @@ data class GroupUIModel(
                         1    -> UserStatus.STUDENT.displayName
                         2    -> UserStatus.TEACHER.displayName
                         else -> UserStatus.UNDEFINED.displayName
-                    }
+                    },
+                    absence = "${absenceList.size}ч."
                 )
             }
         }

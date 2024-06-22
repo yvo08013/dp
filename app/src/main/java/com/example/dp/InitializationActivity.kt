@@ -6,6 +6,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.dp.core.ui.BaseActivity
 import com.example.dp.core.utils.JSONLoader
 import com.example.dp.core.utils.appComponent
+import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.GroupEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
@@ -93,6 +94,24 @@ class InitializationActivity : BaseActivity<ActivityInitializationBinding>(
                 object : TypeToken<List<SubjectEntity>>() {}.type
             ).forEach {
                 scheduleDAO.createSubject(it)
+            }
+
+            gson.fromJson<List<SubjectEntity>>(
+                dbSubjects.get("data").toString(),
+                object : TypeToken<List<SubjectEntity>>() {}.type
+            ).forEach { subject ->
+                val group = groupDAO.getGroup(subject.groupID)
+                group.members.forEach { user ->
+                    val chance = (0..10).random()
+                    if (chance > 8) {
+                        scheduleDAO.createAbsence(
+                            AbsenceEntity(
+                                userID = user.id!!,
+                                subjectID = subject.id!!,
+                            )
+                        )
+                    }
+                }
             }
         }
     }
