@@ -9,6 +9,7 @@
     <string name = "title_group">Group</string>
     <string name = "title_user_info">UserInfo</string>
     <string name = "title_user_absence">UserAbsence</string>
+    <string name = "title_group_list">GroupList</string>
     <string name = "title_sign_up">SignUp</string>
     <string name = "title_sign_in">SignIn</string>
 

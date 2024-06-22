@@ -33,7 +33,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(
                     ProfileFragmentDirections.actionFProfileToFGroup(viewModel.userGroupID!!)
                 )
             } else {
-                //TODO umplement group list screen
+                findNavController().navigate(
+                    ProfileFragmentDirections.actionFProfileToFGroupList()
+                )
             }
         }
     }

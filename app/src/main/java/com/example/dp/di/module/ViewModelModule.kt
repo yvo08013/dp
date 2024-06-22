@@ -2,6 +2,7 @@ package com.example.dp.di.module
 
 import androidx.lifecycle.ViewModel
 import com.example.dp.ui.group.GroupViewModel
+import com.example.dp.ui.group_list.GroupListViewModel
 import com.example.dp.ui.schedule.ScheduleViewModel
 import com.example.dp.ui.home.HomeViewModel
 import com.example.dp.ui.profile.ProfileViewModel
@@ -68,4 +69,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(UserAbsenceViewModel::class)
     abstract fun bindsUserAbsenceViewModel(viewModel: UserAbsenceViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(GroupListViewModel::class)
+    abstract fun bindsGroupListViewModel(viewModel: GroupListViewModel): ViewModel
 }

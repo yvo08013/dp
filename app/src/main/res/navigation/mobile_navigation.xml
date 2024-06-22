@@ -33,6 +33,9 @@
         <action
             android:id = "@+id/action_f_profile_to_f_user_absence"
             app:destination = "@id/f_user_absence" />
+        <action
+            android:id = "@+id/action_f_profile_to_f_group_list"
+            app:destination = "@id/f_group_list" />
     </fragment>
 
     <fragment
@@ -89,7 +92,7 @@
         android:id = "@+id/f_user_info"
         android:name = "com.example.dp.ui.userInfo.UserInfoFragment"
         android:label = "@string/title_user_info"
-        tools:layout = "@layout/fragment_user_info" >
+        tools:layout = "@layout/fragment_user_info">
         <argument
             android:name = "userID"
             app:argType = "integer" />
@@ -105,13 +108,23 @@
         android:id = "@+id/f_user_absence"
         android:name = "com.example.dp.ui.user_absence.UserAbsenceFragment"
         android:label = "@string/title_user_absence"
-        tools:layout = "@layout/fragment_user_absence" >
+        tools:layout = "@layout/fragment_user_absence">
         <argument
             android:name = "userID"
             app:argType = "integer" />
         <argument
             android:name = "userName"
             app:argType = "string" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_group_list"
+        android:name = "com.example.dp.ui.group_list.GroupListFragment"
+        android:label = "@string/title_group_list"
+        tools:layout = "@layout/fragment_group_list">
+        <action
+            android:id = "@+id/action_f_group_list_to_f_group"
+            app:destination = "@id/f_group" />
     </fragment>
 
 </navigation>

@@ -25,8 +25,6 @@ class UserInfoFragment : BaseFragment<FragmentUserInfoBinding>(
                 findNavController().navigate(
                     UserInfoFragmentDirections.actionFUserInfoToFGroup(viewModel.userGroupID!!)
                 )
-            } else {
-                //TODO umplement group list screen
             }
         }
     }
