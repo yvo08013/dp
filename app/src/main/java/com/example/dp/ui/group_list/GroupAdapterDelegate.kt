@@ -5,7 +5,7 @@ import com.example.dp.databinding.RvItemGroupBinding
 
 
 fun groupAdapterDelegate(
-    onItemClickListener: (GroupUIModel) -> Unit
+    onItemClickListener: (UiModel.GroupUIModel) -> Unit
 ) = appAdapterDelegate(
     inflate = RvItemGroupBinding::inflate,
     onInit = { binding, itemProvider ->

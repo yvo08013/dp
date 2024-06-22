@@ -43,9 +43,12 @@
     <string name = "group_admin_name_title">Имя администратора</string>
     <string name = "group_members_title">Участники</string>
     <string name = "group_join_button_text">Вступить</string>
+    <string name = "group_invite_button_text">Пригласить пользователя</string>
     <string name = "group_password_hint">Введите пароль</string>
     <string name = "no_absence_found_text">У данного пользователя не было пропущено ни одно занятие в текущем семестре.</string>
 
     <string name = "subject_date_title">Дата и время события</string>
     <string name = "subject_members_title">Участники</string>
+
+    <string name = "group_create_button_text">Создать группу</string>
 </resources>

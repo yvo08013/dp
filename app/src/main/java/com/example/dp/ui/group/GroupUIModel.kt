@@ -1,6 +1,7 @@
 package com.example.dp.ui.group
 
 import com.example.dp.core.ui.adapter.AppViewHolderModel
+import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.GroupPOJO
 import com.example.dp.data.model.pojo.UserPOJO
 import com.example.dp.ui.group.GroupUIModel.AdminUIModel.Companion.toAdminUIModel
@@ -18,6 +19,7 @@ data class GroupUIModel(
         MEMBER,
         ADMIN,
         GUEST,
+        GUEST_FREE,
     }
 
     data class AdminUIModel(
@@ -72,7 +74,7 @@ data class GroupUIModel(
     }
 
     companion object {
-        fun GroupPOJO.toUIModel(userID: Int): GroupUIModel {
+        fun GroupPOJO.toUIModel(user: UserEntity): GroupUIModel {
             val admin = members.find { it.id == adminID }!!.toAdminUIModel()
             return GroupUIModel(
                 ID = id!!,
@@ -80,9 +82,10 @@ data class GroupUIModel(
                 admin = admin,
                 members = members.map { it.toUserUIModel() },
                 userGroupStatus = when {
-                    admin.ID == userID              -> UserGroupStatus.ADMIN
-                    members.any { it.id == userID } -> UserGroupStatus.MEMBER
-                    else                            -> UserGroupStatus.GUEST
+                    admin.ID == user.id              -> UserGroupStatus.ADMIN
+                    members.any { it.id == user.id } -> UserGroupStatus.MEMBER
+                    user.groupID != null             -> UserGroupStatus.GUEST
+                    else                             -> UserGroupStatus.GUEST_FREE
                 }
             )
         }

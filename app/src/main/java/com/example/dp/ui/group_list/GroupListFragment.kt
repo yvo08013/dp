@@ -1,5 +1,6 @@
 package com.example.dp.ui.group_list
 
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.dp.core.ui.BaseFragment
 import com.example.dp.core.ui.adapter.AppListAdapter
@@ -13,7 +14,7 @@ class GroupListFragment : BaseFragment<FragmentGroupListBinding>(
 ) {
     private val viewModel: GroupListViewModel by appViewModels()
 
-    private val onItemClickListener: (GroupUIModel) -> Unit = { group ->
+    private val onItemClickListener: (UiModel.GroupUIModel) -> Unit = { group ->
         findNavController().navigate(
             GroupListFragmentDirections.actionFGroupListToFGroup(group.ID)
         )
@@ -38,8 +39,9 @@ class GroupListFragment : BaseFragment<FragmentGroupListBinding>(
         observeState(
             dataFlow = viewModel.groupList,
             useLoadingData = true,
-            onSuccess = { groupList ->
-                recyclerAdapter.submitList(groupList)
+            onSuccess = { uiModel ->
+                binding.btnCreate.isVisible = uiModel.canCreateGroup
+                recyclerAdapter.submitList(uiModel.groups)
             }
         )
     }

@@ -30,6 +30,12 @@ interface UserDAO {
         "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
         "${UserEntity.Columns.ID} = :ID"
     )
+    fun getUserFlow(ID: Int): Flow<UserEntity>
+
+    @Query(
+        "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.ID} = :ID"
+    )
     suspend fun getUserPOJO(ID: Int): UserPOJO
 
     @Query(

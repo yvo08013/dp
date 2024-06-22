@@ -76,36 +76,55 @@
         android:layout_height = "0dp"
         android:layout_marginBottom = "20dp"
         app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf = "@id/btn_join"
+        app:layout_constraintBottom_toTopOf = "@id/actions_container"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toBottomOf = "@+id/members_title"
         tools:itemCount = "8"
         tools:listitem = "@layout/rv_item_group_members" />
 
-    <EditText
-        android:id = "@+id/password_input"
-        android:layout_width = "0dp"
-        android:layout_height = "50dp"
-        android:layout_marginEnd = "20dp"
-        android:hint = "@string/group_password_hint"
-        android:maxLines = "1"
-        android:textSize = "16sp"
-        android:visibility = "gone"
-        app:layout_constraintBottom_toBottomOf = "@+id/btn_join"
-        app:layout_constraintEnd_toStartOf = "@+id/btn_join"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "@+id/btn_join" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id = "@+id/btn_join"
-        style = "@style/BasePrimaryButton"
-        android:layout_width = "150dp"
-        android:layout_height = "50dp"
+    <LinearLayout
+        android:id = "@+id/actions_container"
+        android:layout_width = "0dp"
+        android:layout_height = "wrap_content"
         android:layout_marginBottom = "16dp"
-        android:text = "@string/group_join_button_text"
-        android:visibility = "gone"
+        android:orientation = "horizontal"
         app:layout_constraintBottom_toBottomOf = "parent"
-        app:layout_constraintEnd_toEndOf = "parent" />
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent">
+
+        <EditText
+            android:id = "@+id/password_input"
+            android:layout_width = "0dp"
+            android:layout_height = "50dp"
+            android:layout_marginEnd = "20dp"
+            android:layout_weight = "1"
+            android:hint = "@string/group_password_hint"
+            android:maxLines = "1"
+            android:textSize = "16sp"
+            android:visibility = "gone"
+            app:layout_constraintBottom_toBottomOf = "@+id/btn_join"
+            app:layout_constraintEnd_toStartOf = "@+id/btn_join"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/btn_join" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id = "@+id/btn_join"
+            style = "@style/BasePrimaryButton"
+            android:layout_width = "150dp"
+            android:layout_height = "50dp"
+            android:text = "@string/group_join_button_text"
+            android:visibility = "gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id = "@+id/btn_invite_user"
+            style = "@style/BasePrimaryButton"
+            android:layout_width = "match_parent"
+            android:layout_height = "50dp"
+            android:visibility = "gone"
+            android:text = "@string/group_invite_button_text" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
