@@ -9,7 +9,11 @@
         android:id = "@+id/f_home"
         android:name = "com.example.dp.ui.home.HomeFragment"
         android:label = "@string/title_home"
-        tools:layout = "@layout/fragment_home" />
+        tools:layout = "@layout/fragment_home" >
+        <action
+            android:id = "@+id/action_f_home_to_f_user_info"
+            app:destination = "@id/f_user_info" />
+    </fragment>
 
     <fragment
         android:id = "@+id/f_dashboard"

@@ -34,6 +34,12 @@ interface UserDAO {
 
     @Query(
         "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.NAME} LIKE '%' || :name || '%'"
+    )
+    suspend fun getUsersPOJO(name: String): List<UserPOJO>
+
+    @Query(
+        "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
         "${UserEntity.Columns.ID} = :ID"
     )
     fun getUserPOJOFlow(ID: Int): Flow<UserPOJO>

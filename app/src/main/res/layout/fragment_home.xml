@@ -4,6 +4,44 @@
     xmlns:tools = "http://schemas.android.com/tools"
     android:layout_width = "match_parent"
     android:layout_height = "match_parent"
+    android:layout_marginHorizontal = "16dp"
     tools:context = ".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id = "@+id/et_search_input"
+        android:layout_width = "0dp"
+        android:layout_height = "60dp"
+        android:imeOptions = "actionSearch"
+        android:paddingStart = "-16dp"
+        android:singleLine = "true"
+        app:defaultQueryHint = "Введите имя пользователя"
+        app:iconifiedByDefault = "false"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent"
+        app:queryBackground = "@android:color/transparent" />
+
+    <View
+        android:id = "@+id/divider"
+        android:layout_width = "0dp"
+        android:layout_height = "1dp"
+        android:background = "@color/cardview_dark_background"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/et_search_input" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id = "@+id/rv_search_input"
+        android:layout_width = "0dp"
+        android:layout_height = "0dp"
+        android:layout_marginTop = "10dp"
+        app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/divider"
+        tools:itemCount = "8"
+        tools:listitem = "@layout/rv_item_user" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
