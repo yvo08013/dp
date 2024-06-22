@@ -7,6 +7,7 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.UserPOJO
+import kotlinx.coroutines.flow.Flow
 
 
 @Dao
@@ -30,6 +31,12 @@ interface UserDAO {
         "${UserEntity.Columns.ID} = :ID"
     )
     suspend fun getUserPOJO(ID: Int): UserPOJO
+
+    @Query(
+        "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.ID} = :ID"
+    )
+    fun getUserPOJOFlow(ID: Int): Flow<UserPOJO>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createUser(user: UserEntity): Long

@@ -1,6 +1,7 @@
 package com.example.dp.di.module
 
 import androidx.lifecycle.ViewModel
+import com.example.dp.ui.group.GroupViewModel
 import com.example.dp.ui.schedule.ScheduleViewModel
 import com.example.dp.ui.home.HomeViewModel
 import com.example.dp.ui.profile.ProfileViewModel
@@ -50,4 +51,9 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(SignUpViewModel::class)
     abstract fun bindsSignUpViewModel(viewModel: SignUpViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(GroupViewModel::class)
+    abstract fun bindsGroupViewModel(viewModel: GroupViewModel): ViewModel
 }

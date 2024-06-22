@@ -27,6 +27,15 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(
                 ProfileFragmentDirections.actionFProfileToFAuth()
             )
         }
+        binding.groupValue.setOnClickListener {
+            if (viewModel.userGroupID != null) {
+                findNavController().navigate(
+                    ProfileFragmentDirections.actionFProfileToFGroup(viewModel.userGroupID!!)
+                )
+            } else {
+                //TODO umplement group list screen
+            }
+        }
     }
 
     override fun subscribeUI() {
@@ -34,6 +43,8 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(
             dataFlow = viewModel.userInfo,
             useLoadingData = true,
             onSuccess = { userModel ->
+                viewModel.userGroupID = userModel.group?.ID
+
                 binding.nameValue.text = userModel.name
                 binding.absenceValue.text = userModel.absenceCount
                 binding.statusValue.text = userModel.status.displayName

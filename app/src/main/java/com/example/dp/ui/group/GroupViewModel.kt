@@ -1,4 +1,4 @@
-package com.example.dp.ui.profile
+package com.example.dp.ui.group
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,33 +6,28 @@ import com.example.dp.core.utils.DataSource
 import com.example.dp.core.utils.PrefUtils
 import com.example.dp.core.utils.fetchLocal
 import com.example.dp.data.State
+import com.example.dp.data.dao.GroupDAO
 import com.example.dp.data.dao.UserDAO
-import com.example.dp.ui.profile.ProfileUIModel.Companion.toUIModel
+import com.example.dp.ui.group.GroupUIModel.Companion.toUIModel
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.shareIn
-import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class ProfileViewModel @Inject constructor(
+class GroupViewModel @Inject constructor(
+    private val groupDAO: GroupDAO,
     private val userDAO: UserDAO,
     private val prefUtils: PrefUtils
 ) : ViewModel() {
 
-    var userGroupID: Int? = null
+    var groupID: Int = -1
 
-    val userInfo: SharedFlow<State<ProfileUIModel>> by lazy {
+    val groupInfo: SharedFlow<State<GroupUIModel>> by lazy {
         fetchLocal(
-            dataProvider = { DataSource.LocalFlow(userDAO.getUserPOJOFlow(prefUtils.userID)) },
-            mapDelegate = { it.toUIModel() }
+            dataProvider = { DataSource.Local(groupDAO.getGroup(groupID)) },
+            mapDelegate = { it.toUIModel(prefUtils.userID) }
         ).shareIn(
             viewModelScope, SharingStarted.WhileSubscribed(stopTimeoutMillis = 5000), 1
         )
-    }
-
-    fun deleteUser() {
-        viewModelScope.launch {
-            userDAO.deleteUser(prefUtils.userID)
-        }
     }
 }

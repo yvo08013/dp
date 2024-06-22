@@ -9,7 +9,7 @@
         android:id = "@+id/f_home"
         android:name = "com.example.dp.ui.home.HomeFragment"
         android:label = "@string/title_home"
-        tools:layout = "@layout/fragment_home"/>
+        tools:layout = "@layout/fragment_home" />
 
     <fragment
         android:id = "@+id/f_dashboard"
@@ -27,6 +27,9 @@
             app:destination = "@id/f_auth"
             app:popUpTo = "@id/f_auth"
             app:popUpToInclusive = "false" />
+        <action
+            android:id = "@+id/action_f_profile_to_f_group"
+            app:destination = "@id/f_group" />
     </fragment>
 
     <fragment
@@ -65,4 +68,15 @@
             android:id = "@+id/action_f_auth_to_f_sign_in"
             app:destination = "@id/f_sign_in" />
     </fragment>
+
+    <fragment
+        android:id = "@+id/f_group"
+        android:name = "com.example.dp.ui.group.GroupFragment"
+        android:label = "@string/title_group"
+        tools:layout = "@layout/fragment_group">
+        <argument
+            android:name = "groupID"
+            app:argType = "integer" />
+    </fragment>
+
 </navigation>
