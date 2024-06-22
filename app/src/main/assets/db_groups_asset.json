@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "ii14",
+      "password": "1111",
+      "adminID": 1
+    },
+    {
+      "id": 2,
+      "name": "po1",
+      "password": "2222",
+      "adminID": 2
+    },
+    {
+      "id": 3,
+      "name": "asoi",
+      "password": "3333",
+      "adminID": 3
+    }
+  ]
+}

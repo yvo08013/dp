@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "pavel popov",
+      "subjectID": 1
+    },
+    {
+      "id": 2,
+      "name": "dasha dugina",
+      "subjectID": 2
+    },
+    {
+      "id": 3,
+      "name": "sergey strockiy",
+      "subjectID": 3
+    },
+    {
+      "id": 4,
+      "name": "semen vasilyev",
+      "subjectID": 4
+    },
+    {
+      "id": 5,
+      "name": "anna pologina",
+      "subjectID": 5
+    },
+    {
+      "id": 6,
+      "name": "vladislav prochorov",
+      "subjectID": 6
+    },
+    {
+      "id": 7,
+      "name": "danil begov",
+      "subjectID": 7
+    },
+    {
+      "id": 8,
+      "name": "zachar kirilov",
+      "subjectID": 8
+    },
+    {
+      "id": 9,
+      "name": "alexey kuzmin",
+      "subjectID": 9
+    },
+    {
+      "id": 10,
+      "name": "nazarov ivan",
+      "subjectID": 10
+    }
+  ]
+}

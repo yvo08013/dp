@@ -1,0 +1,235 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "vasya vasilyev",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 2,
+      "name": "petya petrov",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 3,
+      "name": "igor igorev",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 4,
+      "name": "chernov artem",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 5,
+      "name": "yakovleva mariya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 6,
+      "name": "trofimov gordei",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 7,
+      "name": "trofimov timur",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 8,
+      "name": "timofeeva aleksandra",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 9,
+      "name": "sedova valeriya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 10,
+      "name": "romanov roman",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 11,
+      "name": "petrov arsenii",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 12,
+      "name": "orlova kristina",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 13,
+      "name": "muravev zakhar",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 1
+    },
+    {
+      "id": 14,
+      "name": "mironova miroslava",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 15,
+      "name": "mironov andrei",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 16,
+      "name": "melnikov arsenii",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 17,
+      "name": "maslova yana",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 18,
+      "name": "lebedev aleksandr",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 19,
+      "name": "kuleshova elizaveta",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 20,
+      "name": "kuzina viktoriya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 21,
+      "name": "karasev daniil",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 22,
+      "name": "ivanova veronika",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 23,
+      "name": "ivanov daniil",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 2
+    },
+    {
+      "id": 24,
+      "name": "zolotova anna",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 25,
+      "name": "efremov artem",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 26,
+      "name": "emelyanov andrei",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 27,
+      "name": "egorova anastasiya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 28,
+      "name": "goncharova sofiya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 29,
+      "name": "vorobeva anastasiya",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 30,
+      "name": "vasileva ulyana",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 31,
+      "name": "bolshakov kirill",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 32,
+      "name": "bogomolov aleksandr",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    },
+    {
+      "id": 33,
+      "name": "alekseeva varvara",
+      "password": "111111",
+      "userType": 1,
+      "groupID": 3
+    }
+  ]
+}

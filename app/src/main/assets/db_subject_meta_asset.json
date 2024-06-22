@@ -1,0 +1,54 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "matematica",
+      "teacherID": 1
+    },
+    {
+      "id": 2,
+      "name": "history",
+      "teacherID": 2
+    },
+    {
+      "id": 3,
+      "name": "religia",
+      "teacherID": 3
+    },
+    {
+      "id": 4,
+      "name": "datadef",
+      "teacherID": 4
+    },
+    {
+      "id": 5,
+      "name": "cherchenie",
+      "teacherID": 5
+    },
+    {
+      "id": 6,
+      "name": "precphys",
+      "teacherID": 6
+    },
+    {
+      "id": 7,
+      "name": "languageved",
+      "teacherID": 7
+    },
+    {
+      "id": 8,
+      "name": "prirodadef",
+      "teacherID": 8
+    },
+    {
+      "id": 9,
+      "name": "psychology",
+      "teacherID": 9
+    },
+    {
+      "id": 10,
+      "name": "economy",
+      "teacherID": 10
+    }
+  ]
+}
