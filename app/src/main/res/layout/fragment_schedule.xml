@@ -28,12 +28,12 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop = "16dp"
-            android:text = "Расписание группы ii14"
             android:textColor = "@color/black"
             android:textSize = "22sp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
-            app:layout_constraintTop_toTopOf = "parent" />
+            app:layout_constraintTop_toTopOf = "parent"
+            tools:text = "Расписание группы ii14" />
 
         <CalendarView
             android:id = "@+id/calendar_view"

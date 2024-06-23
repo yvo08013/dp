@@ -7,6 +7,7 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.UserPOJO
+import com.example.dp.data.model.pojo.UserWithGroup
 import kotlinx.coroutines.flow.Flow
 
 
@@ -31,6 +32,12 @@ interface UserDAO {
         "${UserEntity.Columns.ID} = :ID"
     )
     fun getUserFlow(ID: Int): Flow<UserEntity>
+
+    @Query(
+        "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +
+        "${UserEntity.Columns.ID} = :ID"
+    )
+    fun getUserWithGroupFlow(ID: Int): Flow<UserWithGroup>
 
     @Query(
         "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +

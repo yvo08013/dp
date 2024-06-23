@@ -7,7 +7,7 @@
         android:title = "@string/title_home" />
 
     <item
-        android:id = "@+id/f_dashboard"
+        android:id = "@+id/f_schedule"
         android:icon = "@drawable/ic_schedule"
         android:title = "@string/title_schedule" />
 

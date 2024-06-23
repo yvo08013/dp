@@ -2,52 +2,52 @@
   "data": [
     {
       "id": 1,
-      "name": "matematica",
+      "name": "выш.мат.",
       "teacherID": 1
     },
     {
       "id": 2,
-      "name": "history",
+      "name": "история",
       "teacherID": 2
     },
     {
       "id": 3,
-      "name": "religia",
+      "name": "религия",
       "teacherID": 3
     },
     {
       "id": 4,
-      "name": "datadef",
+      "name": "статистика",
       "teacherID": 4
     },
     {
       "id": 5,
-      "name": "cherchenie",
+      "name": "бизнес анализ",
       "teacherID": 5
     },
     {
       "id": 6,
-      "name": "precphys",
+      "name": "интернет маркетинг",
       "teacherID": 6
     },
     {
       "id": 7,
-      "name": "languageved",
+      "name": "АоИС",
       "teacherID": 7
     },
     {
       "id": 8,
-      "name": "prirodadef",
+      "name": "БЖЧ",
       "teacherID": 8
     },
     {
       "id": 9,
-      "name": "psychology",
+      "name": "физика",
       "teacherID": 9
     },
     {
       "id": 10,
-      "name": "economy",
+      "name": "англ.язык",
       "teacherID": 10
     }
   ]

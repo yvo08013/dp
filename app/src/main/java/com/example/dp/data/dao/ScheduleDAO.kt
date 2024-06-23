@@ -11,6 +11,7 @@ import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
 import com.example.dp.data.model.pojo.AbsencePOJO
 import com.example.dp.data.model.pojo.SubjectPOJO
+import com.example.dp.data.model.pojo.SubjectSchedulePOJO
 
 
 @Dao
@@ -57,4 +58,12 @@ interface ScheduleDAO {
         "${AbsenceEntity.Columns.USER_ID} = :userID"
     )
     suspend fun getUserAbsenceList(userID: Int): List<AbsencePOJO>
+
+    @Query(
+        "SELECT * FROM ${SubjectEntity.TABLE_NAME} WHERE " +
+        "${SubjectEntity.Columns.GROUP_ID} = :groupID AND " +
+        "${SubjectEntity.Columns.DATE} > :dateStart AND " +
+        "${SubjectEntity.Columns.DATE} < :dateEnd"
+    )
+    suspend fun getScheduleSubjects(groupID: Int, dateStart: Long, dateEnd: Long): List<SubjectSchedulePOJO>
 }

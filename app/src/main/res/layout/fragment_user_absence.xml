@@ -8,16 +8,38 @@
     tools:context = ".ui.profile.ProfileFragment">
 
     <TextView
-        android:id = "@+id/user_name"
+        android:id = "@+id/title"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_marginTop = "16dp"
+        android:text = "@string/absence_statistic_text"
         android:textColor = "@color/black"
         android:textSize = "22sp"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toTopOf = "parent"
+        app:layout_constraintTop_toTopOf = "parent" />
+
+    <TextView
+        android:id = "@+id/user_name_title"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop = "22dp"
+        android:text = "@string/student_text"
+        android:textSize = "16sp"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@id/title" />
+
+    <TextView
+        android:id = "@+id/user_name"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_marginStart = "10dp"
+        android:textColor = "@color/black"
+        android:textSize = "16sp"
+        app:layout_constraintStart_toEndOf = "@+id/user_name_title"
+        app:layout_constraintTop_toTopOf = "@id/user_name_title"
         tools:text = "Василий Васильев" />
+
 
     <ImageView
         android:id = "@+id/btn_back"
@@ -32,13 +54,13 @@
         android:id = "@+id/rv_absence_list"
         android:layout_width = "0dp"
         android:layout_height = "0dp"
-        android:layout_marginTop = "30dp"
+        android:layout_marginTop = "20dp"
         android:layout_marginBottom = "20dp"
         app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toBottomOf = "@+id/btn_back"
+        app:layout_constraintTop_toBottomOf = "@+id/user_name_title"
         tools:itemCount = "8"
         tools:listitem = "@layout/rv_item_user_absence" />
 

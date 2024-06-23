@@ -67,11 +67,22 @@
         android:layout_height = "0dp"
         android:layout_marginBottom = "20dp"
         app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintBottom_toTopOf = "@id/btn_confirm"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toBottomOf = "@+id/members_title"
         tools:itemCount = "8"
         tools:listitem = "@layout/rv_item_subject_member" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id = "@+id/btn_confirm"
+        style = "@style/BasePrimaryButton"
+        android:layout_width = "match_parent"
+        android:layout_height = "50dp"
+        android:layout_marginBottom = "16dp"
+        android:text = "@string/save_changes_button_text"
+        app:layout_constraintBottom_toBottomOf = "parent"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:layout_constraintStart_toStartOf = "parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

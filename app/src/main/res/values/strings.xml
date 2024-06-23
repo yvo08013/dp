@@ -13,11 +13,9 @@
     <string name = "title_group_list">GroupList</string>
     <string name = "title_sign_up">SignUp</string>
     <string name = "title_sign_in">SignIn</string>
-
     <string name = "error_corrupted_data">Data is corrupted or outdated</string>
     <string name = "error_no_data">No data found</string>
     <string name = "error_unknown">Something went wrong</string>
-
     <string name = "login_title">Имя</string>
     <string name = "login_hint">Введите имя</string>
     <string name = "password_title">Пароль</string>
@@ -27,31 +25,29 @@
     <string name = "sign_in_button_text">Войти</string>
     <string name = "sign_up_button_text">Зарегестрироваться</string>
     <string name = "delete_button_text">Удалить аккаунт</string>
-
     <string name = "error_incorrect_password">Неверный пароль</string>
+    <string name = "error_incorrect_login_data">Неверный логин или пароль</string>
     <string name = "error_user_exists">Пользователь с данным именем уже существует</string>
-
     <string name = "choice_admin_text">Преподаватель</string>
     <string name = "choice_user_text">Студент</string>
-
     <string name = "profile_screen_title">Профиль</string>
     <string name = "absence_count_title">Количество пропусков (ч.)</string>
     <string name = "user_name_title">Имя</string>
     <string name = "user_status_title">Статус</string>
     <string name = "user_group_title">Группа</string>
-
     <string name = "group_admin_name_title">Имя администратора</string>
     <string name = "group_members_title">Участники</string>
     <string name = "group_join_button_text">Вступить</string>
     <string name = "group_invite_button_text">Пригласить пользователя</string>
     <string name = "group_password_hint">Введите пароль</string>
     <string name = "no_absence_found_text">У данного пользователя не было пропущено ни одно занятие в текущем семестре.</string>
-
     <string name = "subject_date_title">Дата и время события</string>
     <string name = "subject_members_title">Участники</string>
-
     <string name = "group_create_button_text">Создать группу</string>
     <string name = "no_schedule_text">Занятия в текущий день отсутствуют</string>
     <string name = "no_subject_text">занятие отсутствует</string>
     <string name = "schedule_no_group_text">Для просмотра расписания вы должны быть участником группы</string>
+    <string name = "absence_statistic_text">Статистика пропусков</string>
+    <string name = "student_text">Студент:</string>
+    <string name = "save_changes_button_text">Сохранить изменения</string>
 </resources>

@@ -26,17 +26,13 @@
         app:layout_constraintTop_toBottomOf = "@+id/user_name"
         tools:text = "Преподаватель" />
 
-    <TextView
+    <CheckBox
         android:id = "@+id/user_attendance"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_marginTop = "4dp"
-        android:textColor = "@color/black"
-        android:textSize = "20sp"
-        android:textStyle = "bold"
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintTop_toTopOf = "parent"
-        tools:text = "+" />
+        tools:checked = "true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

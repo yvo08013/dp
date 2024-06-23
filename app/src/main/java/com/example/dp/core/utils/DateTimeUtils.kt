@@ -5,6 +5,7 @@ import java.time.LocalDate
 import java.time.temporal.WeekFields
 import java.util.Locale
 
+const val dayInMilliseconds = 86400000
 
 fun createListOfDates(
     startDate: LocalDate,

@@ -16,10 +16,14 @@
     </fragment>
 
     <fragment
-        android:id = "@+id/f_dashboard"
+        android:id = "@+id/f_schedule"
         android:name = "com.example.dp.ui.schedule.ScheduleFragment"
         android:label = "@string/title_schedule"
-        tools:layout = "@layout/fragment_schedule" />
+        tools:layout = "@layout/fragment_schedule" >
+        <action
+            android:id = "@+id/action_f_schedule_to_f_subject"
+            app:destination = "@id/f_subject" />
+    </fragment>
 
     <fragment
         android:id = "@+id/f_profile"

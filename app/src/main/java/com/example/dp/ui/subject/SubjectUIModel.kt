@@ -1,6 +1,5 @@
 package com.example.dp.ui.subject
 
-import android.util.Log
 import com.example.dp.core.ui.adapter.AppViewHolderModel
 import com.example.dp.data.model.pojo.SubjectPOJO
 import com.example.dp.data.model.pojo.UserPOJO
@@ -19,7 +18,7 @@ data class SubjectUIModel(
         val ID: Int,
         val name: String,
         val status: String,
-        val attendance: String
+        val attendance: Boolean
     ) : AppViewHolderModel {
         enum class UserStatus(val displayName: String) {
             TEACHER("Преподаватель"),
@@ -37,7 +36,7 @@ data class SubjectUIModel(
                         2 -> UserStatus.TEACHER.displayName
                         else -> UserStatus.UNDEFINED.displayName
                     },
-                    attendance = if (absence) "-" else "+"
+                    attendance = !absence
                 )
             }
         }

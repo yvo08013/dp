@@ -49,7 +49,7 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>(
                     ErrorCodes.STATE_NO_DATA -> {
                         Toast.makeText(
                             binding.root.context,
-                            R.string.error_incorrect_password,
+                            R.string.error_incorrect_login_data,
                             Toast.LENGTH_SHORT
                         ).show()
                     }

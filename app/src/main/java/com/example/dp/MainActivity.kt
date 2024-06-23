@@ -1,5 +1,8 @@
 package com.example.dp
 
+import android.app.Activity
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
@@ -8,6 +11,7 @@ import com.example.dp.core.ui.BaseActivity
 import com.example.dp.core.utils.PrefUtils
 import com.example.dp.core.utils.appComponent
 import com.example.dp.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity : BaseActivity<ActivityMainBinding>(
     ActivityMainBinding::inflate
@@ -15,13 +19,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setLocale(this, LANGUAGE_CODE)
+
         with(supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment) {
 
             NavigationUI.setupWithNavController(binding.navView, navController)
             navController.addOnDestinationChangedListener { _, destination, _ ->
                 when (destination.id) {
                     R.id.f_home,
-                    R.id.f_dashboard,
+                    R.id.f_schedule,
                     R.id.f_profile -> binding.navView.isVisible = true
 
                     else                 -> binding.navView.isVisible = false
@@ -36,5 +42,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
                 navController.graph = graph
             }
         }
+    }
+
+    @Suppress("SameParameterValue")
+    private fun setLocale(activity: Activity, languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val resources: Resources = activity.resources
+        val config: Configuration = resources.configuration
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+    companion object {
+        const val LANGUAGE_CODE = "ru"
     }
 }

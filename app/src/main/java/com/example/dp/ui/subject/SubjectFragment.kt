@@ -1,5 +1,6 @@
 package com.example.dp.ui.subject
 
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.dp.core.ui.BaseFragment
@@ -22,8 +23,20 @@ class SubjectFragment : BaseFragment<FragmentSubjectBinding>(
         )
     }
 
+    private val getIsFutureDate: () -> Boolean = {
+        viewModel.isFutureDate
+    }
+
+    private val getIsUserCanEdit: () -> Boolean = {
+        viewModel.isUserCanEdit
+    }
+
     private val recyclerAdapter: AppListAdapter by appListAdapter(
-        subjectUserAdapterDelegate(onItemClickListener)
+        subjectUserAdapterDelegate(
+            getIsFutureDate,
+            getIsUserCanEdit,
+            onItemClickListener
+        )
     )
 
     override fun initUI() {
@@ -44,6 +57,7 @@ class SubjectFragment : BaseFragment<FragmentSubjectBinding>(
             dataFlow = viewModel.groupInfo,
             useLoadingData = true,
             onSuccess = { subjectModel ->
+                binding.btnConfirm.isVisible = viewModel.isUserCanEdit
                 binding.subjectName.text = subjectModel.name
                 binding.dateValue.text = subjectModel.date
                 recyclerAdapter.submitList(subjectModel.members)

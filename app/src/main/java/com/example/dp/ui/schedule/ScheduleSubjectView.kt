@@ -30,8 +30,11 @@ class ScheduleSubjectView @JvmOverloads constructor(
     var hasSubject: Boolean = DEFAULT_HAS_SUBJECT
         set(value) {
             field = value
+            if (!field) {
+                binding.root.setOnClickListener { }
+            }
             binding.subjectName.isVisible = field
-            binding.subjectDescr.isVisible = field
+            binding.teacherName.isVisible = field
             binding.subjectType.isVisible = field
             binding.noSubjectView.isVisible = !field
         }
@@ -49,5 +52,18 @@ class ScheduleSubjectView @JvmOverloads constructor(
                 recycle()
             }
         }
+    }
+
+    fun bind(
+        id: Int,
+        subjectName: String,
+        teacherName: String,
+        subjectType: String,
+        onSubjectClicked: (Int) -> Unit
+    ) {
+        binding.root.setOnClickListener { onSubjectClicked(id) }
+        binding.teacherName.text = teacherName
+        binding.subjectName.text = subjectName
+        binding.subjectType.text = subjectType
     }
 }

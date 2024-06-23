@@ -15,6 +15,9 @@ import java.time.ZoneId
 import javax.inject.Inject
 
 
+const val semesterStartDate = 1711918800000
+const val semesterEndDate = 1722459600000
+
 class AssetProvider @Inject constructor(private val context: Context) {
 
     fun getAsset(fileName: String): InputStream {
@@ -63,8 +66,8 @@ suspend fun generateGroupSchedule(group: GroupPOJO, dataBase: DataBase) {
         semesterSchedule.add(generateDaySchedule(DayOfWeek.of(i), false))
     }
 
-    val startOfSemester = Instant.ofEpochMilli(1711918800000).atZone(ZoneId.systemDefault()).toLocalDate()
-    val endOfSemester = Instant.ofEpochMilli(1722459600000).atZone(ZoneId.systemDefault()).toLocalDate()
+    val startOfSemester = Instant.ofEpochMilli(semesterStartDate).atZone(ZoneId.systemDefault()).toLocalDate()
+    val endOfSemester = Instant.ofEpochMilli(semesterEndDate).atZone(ZoneId.systemDefault()).toLocalDate()
 
     var subjectID = when (group.id) {
         1    -> 10000

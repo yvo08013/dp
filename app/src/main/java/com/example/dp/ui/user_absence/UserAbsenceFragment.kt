@@ -47,12 +47,16 @@ class UserAbsenceFragment : BaseFragment<FragmentUserAbsenceBinding>(
             dataFlow = viewModel.absenceList,
             useLoadingData = true,
             onSuccess = { absenceList ->
+                binding.userName.isVisible = true
+                binding.userNameTitle.isVisible = true
                 binding.rvAbsenceList.isVisible = true
                 binding.noAbsenceTitle.isVisible = false
                 recyclerAdapter.submitList(absenceList)
             },
             onFailure = { errorCode, messageID, throwable ->
                 if (errorCode == ErrorCodes.STATE_NO_DATA) {
+                    binding.userName.isVisible = false
+                    binding.userNameTitle.isVisible = false
                     binding.rvAbsenceList.isVisible = false
                     binding.noAbsenceTitle.isVisible = true
                 }

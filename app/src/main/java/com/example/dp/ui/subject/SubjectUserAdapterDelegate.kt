@@ -1,10 +1,13 @@
 package com.example.dp.ui.subject
 
+import androidx.core.view.isVisible
 import com.example.dp.core.ui.adapter.appAdapterDelegate
 import com.example.dp.databinding.RvItemSubjectMemberBinding
 
 
 fun subjectUserAdapterDelegate(
+    isAttendanceVisible: () -> Boolean,
+    isAttendanceEditable: () -> Boolean,
     onItemClickListener: (SubjectUIModel.UserUIModel) -> Unit
 ) = appAdapterDelegate(
     inflate = RvItemSubjectMemberBinding::inflate,
@@ -14,6 +17,8 @@ fun subjectUserAdapterDelegate(
     onBind = { binding, item, _ ->
         binding.userName.text = item.name
         binding.userStatus.text = item.status
-        binding.userAttendance.text = item.attendance
+        binding.userAttendance.isEnabled = isAttendanceEditable()
+        binding.userAttendance.isVisible = isAttendanceVisible()
+        binding.userAttendance.isChecked = item.attendance
     }
 )

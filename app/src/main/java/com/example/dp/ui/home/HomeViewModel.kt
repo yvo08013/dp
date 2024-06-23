@@ -1,6 +1,5 @@
 package com.example.dp.ui.home
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.dp.core.utils.CoroutineLauncher
@@ -21,10 +20,6 @@ class HomeViewModel @Inject constructor(
     private val userDAO: UserDAO
 ) : ViewModel() {
 
-    private val addCoroutine = CoroutineLauncher(
-        viewModelScope, Dispatchers.IO, LaunchStrategy.IGNORE
-    )
-
     private val updateCoroutine = CoroutineLauncher(
         viewModelScope, Dispatchers.IO, LaunchStrategy.CANCEL
     )
@@ -40,7 +35,6 @@ class HomeViewModel @Inject constructor(
         viewModelScope.launch {
             withContext((Dispatchers.IO)) {
                 _usersList.emit(userDAO.getUsersPOJO("").map {
-                    Log.d("123", "aaaaa ${it}")
                     it.toUIModel()
                 })
             }
@@ -49,10 +43,11 @@ class HomeViewModel @Inject constructor(
 
     fun updateSearchQuery(inputText: String) {
         updateCoroutine.launch {
-            _usersList.emit(userDAO.getUsersPOJO(inputText).map {
-                Log.d("123", "aaaaa ${it}")
-                it.toUIModel()
-            })
+            _usersList.emit(
+                userDAO.getUsersPOJO(inputText).map {
+                    it.toUIModel()
+                }
+            )
         }
     }
 }
