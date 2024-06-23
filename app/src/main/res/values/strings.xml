@@ -25,7 +25,7 @@
     <string name = "confirm_button_text">Продолжить</string>
     <string name = "sign_out_button_text">Выйти</string>
     <string name = "sign_in_button_text">Войти</string>
-    <string name = "sign_up_button_text">Зарегестрироваться</string>
+    <string name = "sign_up_button_text">Зарегистрироваться</string>
     <string name = "delete_button_text">Удалить аккаунт</string>
     <string name = "error_incorrect_password">Неверный пароль</string>
     <string name = "error_incorrect_login_data">Неверный логин или пароль</string>

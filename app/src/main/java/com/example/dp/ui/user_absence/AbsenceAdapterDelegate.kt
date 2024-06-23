@@ -2,6 +2,7 @@ package com.example.dp.ui.user_absence
 
 import com.example.dp.core.ui.adapter.appAdapterDelegate
 import com.example.dp.databinding.RvItemUserAbsenceBinding
+import com.example.dp.databinding.RvItemUserAbsenceDividerBinding
 
 
 fun absenceAdapterDelegate(
@@ -17,3 +18,13 @@ fun absenceAdapterDelegate(
         binding.teacherName.text = item.teacherName
     }
 )
+
+fun absenceDividerAdapterDelegate() =
+    appAdapterDelegate<UserAbsenceDividerUIModel, RvItemUserAbsenceDividerBinding>(
+        inflate = RvItemUserAbsenceDividerBinding::inflate,
+        onInit = { binding, itemProvider ->
+        },
+        onBind = { binding, item, _ ->
+            binding.absenceDate.text = item.date
+        }
+    )

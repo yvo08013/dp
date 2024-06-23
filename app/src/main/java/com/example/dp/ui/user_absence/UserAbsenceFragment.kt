@@ -25,7 +25,8 @@ class UserAbsenceFragment : BaseFragment<FragmentUserAbsenceBinding>(
     }
 
     private val recyclerAdapter: AppListAdapter by appListAdapter(
-        absenceAdapterDelegate(onItemClickListener)
+        absenceAdapterDelegate(onItemClickListener),
+        absenceDividerAdapterDelegate()
     )
 
     override fun initUI() {

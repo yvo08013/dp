@@ -36,6 +36,6 @@
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintStart_toStartOf = "parent"
         app:layout_constraintTop_toTopOf = "parent"
-        tools:text = "20.04.2024 14:30" />
+        tools:text = "20 июня, 14:30" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

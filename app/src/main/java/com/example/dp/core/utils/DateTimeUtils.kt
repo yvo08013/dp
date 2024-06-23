@@ -1,7 +1,10 @@
 package com.example.dp.core.utils
 
+import java.text.SimpleDateFormat
 import java.time.DayOfWeek
+import java.time.Instant
 import java.time.LocalDate
+import java.time.ZoneId
 import java.time.temporal.WeekFields
 import java.util.Locale
 
@@ -31,3 +34,26 @@ fun createListOfDates(
         }
     }
 }
+
+fun Long.toLocalDate() = Instant.ofEpochMilli(this).atZone(ZoneId.systemDefault()).toLocalDate()
+
+val locale = Locale("ru")
+
+val absenceGroupDateFormat = SimpleDateFormat("yyyy", locale)
+
+val absenceItemDateFormat = SimpleDateFormat("dd MMMM, hh:ss", locale)
+
+var monthNames = arrayOf(
+    "Январь",
+    "Февраль",
+    "Март",
+    "Апрель",
+    "Май",
+    "Июнь",
+    "Июль",
+    "Август",
+    "Сентябрь",
+    "Октябрь",
+    "Ноябрь",
+    "Декабрь"
+)

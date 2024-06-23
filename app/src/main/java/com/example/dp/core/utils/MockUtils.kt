@@ -10,7 +10,6 @@ import com.example.dp.data.model.pojo.GroupPOJO
 import org.json.JSONObject
 import java.io.InputStream
 import java.time.DayOfWeek
-import java.time.Instant
 import java.time.ZoneId
 import javax.inject.Inject
 
@@ -66,8 +65,8 @@ suspend fun generateGroupSchedule(group: GroupPOJO, dataBase: DataBase) {
         semesterSchedule.add(generateDaySchedule(DayOfWeek.of(i), false))
     }
 
-    val startOfSemester = Instant.ofEpochMilli(semesterStartDate).atZone(ZoneId.systemDefault()).toLocalDate()
-    val endOfSemester = Instant.ofEpochMilli(semesterEndDate).atZone(ZoneId.systemDefault()).toLocalDate()
+    val startOfSemester = semesterStartDate.toLocalDate()
+    val endOfSemester = semesterEndDate.toLocalDate()
 
     var subjectID = when (group.id) {
         1    -> 10000
