@@ -7,10 +7,13 @@ import com.example.dp.core.utils.PrefUtils
 import com.example.dp.core.utils.fetchLocal
 import com.example.dp.data.State
 import com.example.dp.data.dao.ScheduleDAO
+import com.example.dp.data.model.AbsenceEntity
+import com.example.dp.data.model.SubjectEntity
 import com.example.dp.ui.subject.SubjectUIModel.Companion.toUIModel
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.shareIn
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class SubjectViewModel @Inject constructor(
@@ -24,7 +27,7 @@ class SubjectViewModel @Inject constructor(
 
     val groupInfo: SharedFlow<State<SubjectUIModel>> by lazy {
         fetchLocal(
-            dataProvider = { DataSource.Local(scheduleDAO.getSubject(subjectID)) },
+            dataProvider = { DataSource.LocalFlow(scheduleDAO.getSubjectFlow(subjectID)) },
             mapDelegate = { subject ->
                 val userIsAdmin = subject.group.adminID == prefUtils.userID
                 val userIsTeacher = subject.group.members.any { user ->
@@ -37,5 +40,20 @@ class SubjectViewModel @Inject constructor(
         ).shareIn(
             viewModelScope, SharingStarted.WhileSubscribed(stopTimeoutMillis = 5000), 1
         )
+    }
+
+    fun onAbsenceClicked(user: SubjectUIModel.UserUIModel) {
+        viewModelScope.launch {
+            if (user.absence != null) {
+                scheduleDAO.deleteAbsence(user.absence.id!!)
+            } else {
+                scheduleDAO.createAbsence(
+                    AbsenceEntity(
+                        userID = user.ID,
+                        subjectID = subjectID,
+                    )
+                )
+            }
+        }
     }
 }

@@ -9,9 +9,11 @@ import com.example.dp.data.model.AttendanceEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
+import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.AbsencePOJO
 import com.example.dp.data.model.pojo.SubjectPOJO
 import com.example.dp.data.model.pojo.SubjectSchedulePOJO
+import kotlinx.coroutines.flow.Flow
 
 
 @Dao
@@ -21,7 +23,7 @@ interface ScheduleDAO {
         "SELECT * FROM ${SubjectEntity.TABLE_NAME} WHERE " +
         "${SubjectEntity.Columns.ID} = :ID"
     )
-    suspend fun getSubject(ID: Int): SubjectPOJO
+    fun getSubjectFlow(ID: Int): Flow<SubjectPOJO>
 
     @Query("SELECT * FROM ${SubjectMetadataEntity.TABLE_NAME}")
     suspend fun getSubjectsMeta(): List<SubjectMetadataEntity>
@@ -43,6 +45,12 @@ interface ScheduleDAO {
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createAbsence(absence: AbsenceEntity): Long
+
+    @Query(
+        "DELETE FROM ${AbsenceEntity.TABLE_NAME} WHERE " +
+        "${AbsenceEntity.Columns.ID} = :ID"
+    )
+    suspend fun deleteAbsence(ID: Int)
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createAbsences(absences: List<AbsenceEntity>)

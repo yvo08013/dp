@@ -1,6 +1,5 @@
 package com.example.dp.ui.subject
 
-import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.dp.core.ui.BaseFragment
@@ -23,6 +22,10 @@ class SubjectFragment : BaseFragment<FragmentSubjectBinding>(
         )
     }
 
+    private val onAbsenceClickListener: (SubjectUIModel.UserUIModel) -> Unit = { userModel ->
+        viewModel.onAbsenceClicked(userModel)
+    }
+
     private val getIsFutureDate: () -> Boolean = {
         viewModel.isFutureDate
     }
@@ -35,7 +38,8 @@ class SubjectFragment : BaseFragment<FragmentSubjectBinding>(
         subjectUserAdapterDelegate(
             getIsFutureDate,
             getIsUserCanEdit,
-            onItemClickListener
+            onItemClickListener,
+            onAbsenceClickListener
         )
     )
 
@@ -57,7 +61,6 @@ class SubjectFragment : BaseFragment<FragmentSubjectBinding>(
             dataFlow = viewModel.groupInfo,
             useLoadingData = true,
             onSuccess = { subjectModel ->
-                binding.btnConfirm.isVisible = viewModel.isUserCanEdit
                 binding.subjectName.text = subjectModel.name
                 binding.dateValue.text = subjectModel.date
                 recyclerAdapter.submitList(subjectModel.members)

@@ -1,6 +1,7 @@
 package com.example.dp.ui.subject
 
 import com.example.dp.core.ui.adapter.AppViewHolderModel
+import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.pojo.SubjectPOJO
 import com.example.dp.data.model.pojo.UserPOJO
 import com.example.dp.ui.subject.SubjectUIModel.UserUIModel.Companion.toUserUIModel
@@ -18,7 +19,7 @@ data class SubjectUIModel(
         val ID: Int,
         val name: String,
         val status: String,
-        val attendance: Boolean
+        val absence: AbsenceEntity?
     ) : AppViewHolderModel {
         enum class UserStatus(val displayName: String) {
             TEACHER("Преподаватель"),
@@ -27,7 +28,7 @@ data class SubjectUIModel(
         }
 
         companion object {
-            fun UserPOJO.toUserUIModel(absence: Boolean): UserUIModel {
+            fun UserPOJO.toUserUIModel(absence: AbsenceEntity?): UserUIModel {
                 return UserUIModel(
                     ID = id!!,
                     name = name,
@@ -36,7 +37,7 @@ data class SubjectUIModel(
                         2 -> UserStatus.TEACHER.displayName
                         else -> UserStatus.UNDEFINED.displayName
                     },
-                    attendance = !absence
+                    absence = absence
                 )
             }
         }
@@ -60,7 +61,7 @@ data class SubjectUIModel(
                 date = format.format(Date(date)),
                 name = subjectMetadata.name,
                 members = group.members.map { user ->
-                    user.toUserUIModel(absenceList.any { it.userID == user.id })
+                    user.toUserUIModel(absenceList.find { it.userID == user.id })
                 }
             )
         }
