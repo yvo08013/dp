@@ -11,6 +11,8 @@
     <string name = "title_user_absence">UserAbsence</string>
     <string name = "title_subject">Subject</string>
     <string name = "title_group_list">GroupList</string>
+    <string name = "title_create_group">CreateGroup</string>
+    <string name = "title_lessons_info">CreateGroup</string>
     <string name = "title_sign_up">SignUp</string>
     <string name = "title_sign_in">SignIn</string>
     <string name = "error_corrupted_data">Data is corrupted or outdated</string>
@@ -50,4 +52,31 @@
     <string name = "absence_statistic_text">Статистика пропусков</string>
     <string name = "student_text">Студент:</string>
     <string name = "save_changes_button_text">Сохранить изменения</string>
+
+    <string name="group_name_title">Название группы</string>
+    <string name="group_name_title_hint">Введите название группы</string>
+    <string name="create_title">Создать</string>
+    <string name="upper_week_title">Верхняя неделя</string>
+    <string name="down_week_title">Нижняя неделя</string>
+    <string name="week_day_monday">Понедельник</string>
+    <string name="week_day_tuesday">Вторник</string>
+    <string name="week_day_wednesday">Среда</string>
+    <string name="week_day_thursday">Четверг</string>
+    <string name="week_day_friday">Пятница</string>
+    <string name="week_day_saturday">Суббота</string>
+    <string name="week_day_sunday">Воскресенье</string>
+
+    <string name = "lessons_info_text">Заполнение данных</string>
+    <string name="lesson_type">Тип пары</string>
+    <string name="lesson_type_lecture">Лекция</string>
+    <string name="lesson_type_practice">Практика</string>
+    <string name="lesson_type_lab">Лабораторная</string>
+    <string name="lesson_teacher">Преподаватель</string>
+    <string name="lesson_title">Предмет</string>
+    <string name="lesson_1">Пара 1</string>
+    <string name="lesson_2">Пара 2</string>
+    <string name="lesson_3">Пара 3</string>
+    <string name="lesson_4">Пара 4</string>
+    <string name="lesson_5">Пара 5</string>
+
 </resources>

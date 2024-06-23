@@ -1,6 +1,7 @@
 package com.example.dp.di.module
 
 import androidx.lifecycle.ViewModel
+import com.example.dp.ui.create_group.CreateGroupViewModel
 import com.example.dp.ui.group.GroupViewModel
 import com.example.dp.ui.group_list.GroupListViewModel
 import com.example.dp.ui.schedule.ScheduleViewModel
@@ -75,6 +76,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(GroupListViewModel::class)
     abstract fun bindsGroupListViewModel(viewModel: GroupListViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CreateGroupViewModel::class)
+    abstract fun bindsCreateGroupViewModel(viewModel: CreateGroupViewModel): ViewModel
 
     @Binds
     @IntoMap

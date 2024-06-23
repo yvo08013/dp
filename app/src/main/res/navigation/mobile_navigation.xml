@@ -136,6 +136,28 @@
         <action
             android:id = "@+id/action_f_group_list_to_f_group"
             app:destination = "@id/f_group" />
+        <action
+            android:id = "@+id/action_f_group_list_to_f_create_group"
+            app:destination = "@id/f_create_group" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_create_group"
+        android:name = "com.example.dp.ui.create_group.CreateGroupFragment"
+        android:label = "@string/title_create_group"
+        tools:layout = "@layout/create_group">
+
+        <action
+            android:id = "@+id/action_f_create_group_to_f_lessons_info"
+            app:destination = "@id/f_lessons_info" />
+
+    </fragment>
+
+    <fragment
+        android:id = "@+id/f_lessons_info"
+        android:name = "com.example.dp.ui.lessons_info.LessonsInfoFragment"
+        android:label = "@string/title_lessons_info"
+        tools:layout = "@layout/lessons_info">
     </fragment>
 
     <fragment

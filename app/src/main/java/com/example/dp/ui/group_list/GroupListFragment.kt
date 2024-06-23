@@ -33,6 +33,11 @@ class GroupListFragment : BaseFragment<FragmentGroupListBinding>(
         binding.btnBack.setOnClickListener {
             findNavController().popBackStack()
         }
+        binding.btnCreate.setOnClickListener {
+            findNavController().navigate(
+                GroupListFragmentDirections.actionFGroupListToFCreateGroup()
+            )
+        }
     }
 
     override fun subscribeUI() {
