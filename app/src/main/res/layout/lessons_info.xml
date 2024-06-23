@@ -123,26 +123,34 @@
                             android:textSize = "18sp"
                             android:text="@string/lesson_type" />
 
-                        <RadioButton
-                            android:id = "@+id/lesson_type_lecture"
+                        <RadioGroup
+                            android:id = "@+id/radio_group_1"
                             android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lecture" />
+                            android:layout_marginHorizontal = "16dp"
+                            android:orientation = "vertical"
+                            app:layout_constraintTop_toBottomOf = "@+id/password_input">
 
-                        <RadioButton
-                            android:id = "@+id/lesson_type_practice"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_practice" />
+                            <RadioButton
+                                android:id = "@+id/lesson_type_lecture"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lecture" />
 
-                        <RadioButton
-                            android:id = "@+id/lesson_type_lab"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lab" />
+                            <RadioButton
+                                android:id = "@+id/lesson_type_practice"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_practice" />
+
+                            <RadioButton
+                                android:id = "@+id/lesson_type_lab"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_lab" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -230,26 +238,34 @@
                             android:textSize = "18sp"
                             android:text="@string/lesson_type" />
 
-                        <RadioButton
-                            android:id = "@+id/second_lesson_type_lecture"
+                        <RadioGroup
+                            android:id = "@+id/radio_group_2"
                             android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lecture" />
+                            android:layout_marginHorizontal = "16dp"
+                            android:orientation = "vertical"
+                            app:layout_constraintTop_toBottomOf = "@+id/password_input">
 
-                        <RadioButton
-                            android:id = "@+id/second_lesson_type_practice"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_practice" />
+                            <RadioButton
+                                android:id = "@+id/second_lesson_type_lecture"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lecture" />
 
-                        <RadioButton
-                            android:id = "@+id/second_lesson_type_lab"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lab" />
+                            <RadioButton
+                                android:id = "@+id/second_lesson_type_practice"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_practice" />
+
+                            <RadioButton
+                                android:id = "@+id/second_lesson_type_lab"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_lab" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -337,26 +353,34 @@
                             android:textSize = "18sp"
                             android:text="@string/lesson_type" />
 
-                        <RadioButton
-                            android:id = "@+id/third_lesson_type_lecture"
+                        <RadioGroup
+                            android:id = "@+id/radio_group_3"
                             android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lecture" />
+                            android:layout_marginHorizontal = "16dp"
+                            android:orientation = "vertical"
+                            app:layout_constraintTop_toBottomOf = "@+id/password_input">
 
-                        <RadioButton
-                            android:id = "@+id/third_lesson_type_practice"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_practice" />
+                            <RadioButton
+                                android:id = "@+id/third_lesson_type_lecture"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lecture" />
 
-                        <RadioButton
-                            android:id = "@+id/third_lesson_type_lab"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lab" />
+                            <RadioButton
+                                android:id = "@+id/third_lesson_type_practice"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_practice" />
+
+                            <RadioButton
+                                android:id = "@+id/third_lesson_type_lab"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:text = "@string/lesson_type_lab" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -444,26 +468,36 @@
                             android:textSize = "18sp"
                             android:text="@string/lesson_type" />
 
-                        <RadioButton
-                            android:id = "@+id/fourth_lesson_type_lecture"
+                        <RadioGroup
+                            android:id = "@+id/radio_group_4"
                             android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lecture" />
+                            android:layout_marginHorizontal = "16dp"
+                            android:orientation = "vertical"
+                            app:layout_constraintTop_toBottomOf = "@+id/password_input">
 
-                        <RadioButton
-                            android:id = "@+id/fourth_lesson_type_practice"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_practice" />
+                            <RadioButton
+                                android:id = "@+id/fourth_lesson_type_lecture"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lecture" />
 
-                        <RadioButton
-                            android:id = "@+id/fourth_lesson_type_lab"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lab" />
+                            <RadioButton
+                                android:id = "@+id/fourth_lesson_type_practice"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_practice" />
+
+                            <RadioButton
+                                android:id = "@+id/fourth_lesson_type_lab"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lab" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -551,26 +585,36 @@
                             android:textSize = "18sp"
                             android:text="@string/lesson_type" />
 
-                        <RadioButton
-                            android:id = "@+id/fith_lesson_type_lecture"
+                        <RadioGroup
+                            android:id = "@+id/radio_group_5"
                             android:layout_width = "match_parent"
                             android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lecture" />
+                            android:layout_marginHorizontal = "16dp"
+                            android:orientation = "vertical"
+                            app:layout_constraintTop_toBottomOf = "@+id/password_input">
 
-                        <RadioButton
-                            android:id = "@+id/fith_lesson_type_practice"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_practice" />
+                            <RadioButton
+                                android:id = "@+id/fith_lesson_type_lecture"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lecture" />
 
-                        <RadioButton
-                            android:id = "@+id/fith_lesson_type_lab"
-                            android:layout_width = "match_parent"
-                            android:layout_height = "wrap_content"
-                            android:checked = "true"
-                            android:text = "@string/lesson_type_lab" />
+                            <RadioButton
+                                android:id = "@+id/fith_lesson_type_practice"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_practice" />
+
+                            <RadioButton
+                                android:id = "@+id/fith_lesson_type_lab"
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:checked = "true"
+                                android:text = "@string/lesson_type_lab" />
+
+                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -589,7 +633,7 @@
         android:layout_height = "50dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom = "16dp"
-        android:text = "@string/create_title"
+        android:text = "@string/save_title"
         app:layout_constraintBottom_toBottomOf = "parent"
         app:layout_constraintEnd_toEndOf = "parent"
         app:layout_constraintStart_toStartOf = "parent" />

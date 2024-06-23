@@ -10,27 +10,21 @@ import com.example.dp.R
 import com.example.dp.databinding.ChooseTeacherBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class ChooseTeacherDialogFragment(listener: TeacherDialogListener): BottomSheetDialogFragment() {
+class ChooseTeacherDialogFragment(listener: TeacherDialogListener) : BottomSheetDialogFragment() {
 
 
     lateinit var binding: ChooseTeacherBinding
-    private var mBottomSheetListener: TeacherDialogListener?=null
+    private var mBottomSheetListener: TeacherDialogListener? = null
 
     init {
         this.mBottomSheetListener = listener
     }
 
-
-
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return super.onCreateDialog(savedInstanceState).apply {
-            window?.setDimAmount(0.4f) /** Set dim amount here (the dimming factor of the parent fragment) */
+            window?.setDimAmount(0.4f)
 
-            /** IMPORTANT! Here we set transparency to dialog layer */
             setOnShowListener {
-//                val bottomSheet = findViewById<View>(com.google.android.material.R.id.design_bottom_sheet) as FrameLayout
-                //bottomSheet.setBackgroundResource(android.R.color.transparent)
-
                 binding.teacher1.setOnClickListener {
                     mBottomSheetListener?.chooseTeacherClick()
                 }
@@ -50,8 +44,10 @@ class ChooseTeacherDialogFragment(listener: TeacherDialogListener): BottomSheetD
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
 
         binding = ChooseTeacherBinding.bind(inflater.inflate(R.layout.choose_teacher, container))
         return binding.root
@@ -60,11 +56,10 @@ class ChooseTeacherDialogFragment(listener: TeacherDialogListener): BottomSheetD
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        /** attach listener from parent fragment */
         try {
             mBottomSheetListener = context as TeacherDialogListener?
-        }
-        catch (e: ClassCastException){
+        } catch (e: ClassCastException) {
+            //no-op
         }
     }
 

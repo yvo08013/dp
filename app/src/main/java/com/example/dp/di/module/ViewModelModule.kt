@@ -6,6 +6,7 @@ import com.example.dp.ui.group.GroupViewModel
 import com.example.dp.ui.group_list.GroupListViewModel
 import com.example.dp.ui.schedule.ScheduleViewModel
 import com.example.dp.ui.home.HomeViewModel
+import com.example.dp.ui.lessons_info.LessonsInfoViewModel
 import com.example.dp.ui.profile.ProfileViewModel
 import com.example.dp.ui.sign_in.SignInViewModel
 import com.example.dp.ui.sign_up.SignUpViewModel
@@ -81,6 +82,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(CreateGroupViewModel::class)
     abstract fun bindsCreateGroupViewModel(viewModel: CreateGroupViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(LessonsInfoViewModel::class)
+    abstract fun bindsLessonsInfoViewModel(viewModel: LessonsInfoViewModel): ViewModel
 
     @Binds
     @IntoMap

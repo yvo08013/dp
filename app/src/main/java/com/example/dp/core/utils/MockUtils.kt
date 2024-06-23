@@ -10,7 +10,6 @@ import com.example.dp.data.model.pojo.GroupPOJO
 import org.json.JSONObject
 import java.io.InputStream
 import java.time.DayOfWeek
-import java.time.ZoneId
 import javax.inject.Inject
 
 
@@ -86,7 +85,7 @@ suspend fun generateGroupSchedule(group: GroupPOJO, dataBase: DataBase) {
             isUpperWeek = scheduleDay.isUpperWeek
         )
         dates.forEach { date ->
-            val epochMilliseconds = date.atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
+            val epochMilliseconds = date.toLong()
 
             scheduleDay.subjects.forEach { scheduleSubject ->
                 val subject = SubjectEntity(

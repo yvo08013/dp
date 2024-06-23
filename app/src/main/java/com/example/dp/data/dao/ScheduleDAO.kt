@@ -6,10 +6,10 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.AttendanceEntity
+import com.example.dp.data.model.ScheduleSubjectEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
-import com.example.dp.data.model.UserEntity
 import com.example.dp.data.model.pojo.AbsencePOJO
 import com.example.dp.data.model.pojo.SubjectPOJO
 import com.example.dp.data.model.pojo.SubjectSchedulePOJO
@@ -24,12 +24,6 @@ interface ScheduleDAO {
         "${SubjectEntity.Columns.ID} = :ID"
     )
     fun getSubjectFlow(ID: Int): Flow<SubjectPOJO>
-
-    @Query("SELECT * FROM ${SubjectMetadataEntity.TABLE_NAME}")
-    suspend fun getSubjectsMeta(): List<SubjectMetadataEntity>
-
-    @Query("SELECT * FROM ${TeacherMetadataEntity.TABLE_NAME}")
-    suspend fun getTeachersMeta(): List<TeacherMetadataEntity>
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createSubjectMeta(subject: SubjectMetadataEntity): Long
@@ -74,4 +68,19 @@ interface ScheduleDAO {
         "${SubjectEntity.Columns.DATE} < :dateEnd"
     )
     suspend fun getScheduleSubjects(groupID: Int, dateStart: Long, dateEnd: Long): List<SubjectSchedulePOJO>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun createScheduleSubject(subject: ScheduleSubjectEntity)
+
+    @Query(
+        "DELETE FROM ${ScheduleSubjectEntity.TABLE_NAME} WHERE " +
+        "${ScheduleSubjectEntity.Columns.ID} LIKE '%' || :ID || '%'"
+    )
+    suspend fun deleteScheduleSubject(ID: String)
+
+    @Query("SELECT * FROM ${ScheduleSubjectEntity.TABLE_NAME}")
+    suspend fun getScheduleSubjects(): List<ScheduleSubjectEntity>
+
+    @Query("DELETE FROM ${ScheduleSubjectEntity.TABLE_NAME}")
+    suspend fun clearScheduleSubjects()
 }

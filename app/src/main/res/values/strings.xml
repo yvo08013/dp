@@ -28,6 +28,7 @@
     <string name = "sign_up_button_text">Зарегистрироваться</string>
     <string name = "delete_button_text">Удалить аккаунт</string>
     <string name = "error_incorrect_password">Неверный пароль</string>
+    <string name = "error_creating_group">Не удалось создать группу</string>
     <string name = "error_incorrect_login_data">Неверный логин или пароль</string>
     <string name = "error_user_exists">Пользователь с данным именем уже существует</string>
     <string name = "choice_admin_text">Преподаватель</string>
@@ -54,8 +55,11 @@
     <string name = "save_changes_button_text">Сохранить изменения</string>
 
     <string name="group_name_title">Название группы</string>
+    <string name="group_password_title">Пароль</string>
     <string name="group_name_title_hint">Введите название группы</string>
+    <string name="group_password_title_hint">Введите пароль</string>
     <string name="create_title">Создать</string>
+    <string name="save_title">Сохранить</string>
     <string name="upper_week_title">Верхняя неделя</string>
     <string name="down_week_title">Нижняя неделя</string>
     <string name="week_day_monday">Понедельник</string>

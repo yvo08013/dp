@@ -28,7 +28,9 @@ class InitializationActivity : BaseActivity<ActivityInitializationBinding>(
 
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                prepopulateDB()
+                if (appComponent.dataBase.userDAO.isEmpty()) {
+                    prepopulateDB()
+                }
             }
             startActivity(Intent(this@InitializationActivity, MainActivity::class.java))
             finish()
@@ -37,7 +39,7 @@ class InitializationActivity : BaseActivity<ActivityInitializationBinding>(
 
     private suspend fun prepopulateDB() {
         appComponent.dataBase.apply {
-            clearAllTables()  //TODO remove after tests
+            clearAllTables()
 
             val jsonLoader = JSONLoader()
             val gson = GsonBuilder().create()

@@ -10,6 +10,7 @@ import com.example.dp.data.dao.UserDAO
 import com.example.dp.data.model.AbsenceEntity
 import com.example.dp.data.model.AttendanceEntity
 import com.example.dp.data.model.GroupEntity
+import com.example.dp.data.model.ScheduleSubjectEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
@@ -25,6 +26,7 @@ import com.example.dp.data.model.UserEntity
         SubjectMetadataEntity::class,
         TeacherMetadataEntity::class,
         SubjectEntity::class,
+        ScheduleSubjectEntity::class,
         AttendanceEntity::class,
         AbsenceEntity::class,
     ]

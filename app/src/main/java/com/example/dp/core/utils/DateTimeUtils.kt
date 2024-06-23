@@ -35,6 +35,8 @@ fun createListOfDates(
     }
 }
 
+fun LocalDate.toLong() = this.atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli()
+
 fun Long.toLocalDate() = Instant.ofEpochMilli(this).atZone(ZoneId.systemDefault()).toLocalDate()
 
 val locale = Locale("ru")

@@ -13,6 +13,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDAO {
+    @Query("SELECT (SELECT COUNT(*) FROM ${UserEntity.TABLE_NAME}) == 0")
+    fun isEmpty(): Boolean
 
     @Query(
         "SELECT * FROM ${UserEntity.TABLE_NAME} WHERE " +

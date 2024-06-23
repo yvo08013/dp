@@ -158,6 +158,12 @@
         android:name = "com.example.dp.ui.lessons_info.LessonsInfoFragment"
         android:label = "@string/title_lessons_info"
         tools:layout = "@layout/lessons_info">
+        <argument
+            android:name = "weekDayOrder"
+            app:argType = "integer" />
+        <argument
+            android:name = "isUpperWeek"
+            app:argType = "boolean" />
     </fragment>
 
     <fragment
