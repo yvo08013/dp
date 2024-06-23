@@ -8,7 +8,7 @@ import com.example.dp.core.utils.fetchLocal
 import com.example.dp.data.State
 import com.example.dp.data.dao.ScheduleDAO
 import com.example.dp.data.model.AbsenceEntity
-import com.example.dp.data.model.SubjectEntity
+import com.example.dp.data.model.AttendanceEntity
 import com.example.dp.ui.subject.SubjectUIModel.Companion.toUIModel
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -49,6 +49,16 @@ class SubjectViewModel @Inject constructor(
             } else {
                 scheduleDAO.createAbsence(
                     AbsenceEntity(
+                        userID = user.ID,
+                        subjectID = subjectID,
+                    )
+                )
+            }
+            if (user.attendance != null) {
+                scheduleDAO.deleteAttendance(user.attendance.id!!)
+            } else {
+                scheduleDAO.createAttendance(
+                    AttendanceEntity(
                         userID = user.ID,
                         subjectID = subjectID,
                     )

@@ -21,7 +21,6 @@ fun subjectUserAdapterDelegate(
         binding.userStatus.text = item.status
         binding.userAttendance.isEnabled = isAttendanceEditable()
         binding.userAttendance.isVisible = isAttendanceVisible()
-        binding.userAttendance.isChecked = item.absence == null
-
+        binding.userAttendance.isChecked = item.attendance != null
     }
 )

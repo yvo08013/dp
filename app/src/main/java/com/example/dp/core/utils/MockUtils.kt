@@ -99,12 +99,14 @@ suspend fun generateGroupSchedule(group: GroupPOJO, dataBase: DataBase) {
                 )
                 subjectsList.add(subject)
 
-                group.members.forEach { user ->
-                    val chance = (0..10).random()
-                    if (chance > 8) {
-                        absenceList.add(AbsenceEntity(userID = user.id!!, subjectID = subject.id!!))
-                    } else {
-                        attendanceList.add(AttendanceEntity(userID = user.id!!, subjectID = subject.id!!))
+                if(epochMilliseconds < System.currentTimeMillis()) {
+                    group.members.forEach { user ->
+                        val chance = (0..10).random()
+                        if (chance > 8) {
+                            absenceList.add(AbsenceEntity(userID = user.id!!, subjectID = subject.id!!))
+                        } else {
+                            attendanceList.add(AttendanceEntity(userID = user.id!!, subjectID = subject.id!!))
+                        }
                     }
                 }
             }

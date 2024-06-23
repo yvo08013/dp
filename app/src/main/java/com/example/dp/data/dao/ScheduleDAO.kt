@@ -52,6 +52,12 @@ interface ScheduleDAO {
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createAttendance(attendance: AttendanceEntity): Long
 
+    @Query(
+        "DELETE FROM ${AttendanceEntity.TABLE_NAME} WHERE " +
+        "${AttendanceEntity.Columns.ID} = :ID"
+    )
+    suspend fun deleteAttendance(ID: Int)
+
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun createAttendances(attendances: List<AttendanceEntity>)
 

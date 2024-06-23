@@ -34,8 +34,8 @@ class LessonsInfoViewModel @Inject constructor(
         weekDayOrder = weekDayOrder,
         isUpperWeek = isUpperWeek,
         activityType = 1,
-        subjectMetaID = 0,
-        teacherMetaID = 0,
+        subjectMetaID = 2,
+        teacherMetaID = 2,
         dayScheduleOrder = 2,
     )
 
@@ -44,8 +44,8 @@ class LessonsInfoViewModel @Inject constructor(
         weekDayOrder = weekDayOrder,
         isUpperWeek = isUpperWeek,
         activityType = 1,
-        subjectMetaID = 0,
-        teacherMetaID = 0,
+        subjectMetaID = 3,
+        teacherMetaID = 3,
         dayScheduleOrder = 3,
     )
 
@@ -54,8 +54,8 @@ class LessonsInfoViewModel @Inject constructor(
         weekDayOrder = weekDayOrder,
         isUpperWeek = isUpperWeek,
         activityType = 1,
-        subjectMetaID = 1,
-        teacherMetaID = 1,
+        subjectMetaID = 4,
+        teacherMetaID = 4,
         dayScheduleOrder = 4,
     )
 
@@ -64,8 +64,8 @@ class LessonsInfoViewModel @Inject constructor(
         weekDayOrder = weekDayOrder,
         isUpperWeek = isUpperWeek,
         activityType = 1,
-        subjectMetaID = 2,
-        teacherMetaID = 2,
+        subjectMetaID = 5,
+        teacherMetaID = 5,
         dayScheduleOrder = 5,
     )
 
