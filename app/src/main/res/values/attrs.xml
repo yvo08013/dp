@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name = "ScheduleSubjectView">
+        <attr name = "subjectOrder" format = "string" />
+        <attr name = "hasSubject" format = "boolean" />
+    </declare-styleable>
+</resources>

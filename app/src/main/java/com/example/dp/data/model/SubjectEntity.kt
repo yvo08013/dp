@@ -33,6 +33,9 @@ data class SubjectEntity(
     @ColumnInfo(name = Columns.DATE)
     val date: Long,
 
+    @ColumnInfo(name = Columns.DAY_SCHEDULE_ORDER)
+    val dayScheduleOrder: Int,
+
     @ColumnInfo(name = Columns.ACTIVITY_TYPE)
     val activityType: Int,
 ) {
@@ -42,6 +45,7 @@ data class SubjectEntity(
         const val TEACHER_ID = "teacher_id"
         const val SUBJECT_METADATA_ID = "subject_metadata_id"
         const val DATE = "date"
+        const val DAY_SCHEDULE_ORDER = "day_schedule_order"
         const val ACTIVITY_TYPE = "activity_type"
     }
 

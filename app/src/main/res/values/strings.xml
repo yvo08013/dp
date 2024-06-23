@@ -51,4 +51,7 @@
     <string name = "subject_members_title">Участники</string>
 
     <string name = "group_create_button_text">Создать группу</string>
+    <string name = "no_schedule_text">Занятия в текущий день отсутствуют</string>
+    <string name = "no_subject_text">занятие отсутствует</string>
+    <string name = "schedule_no_group_text">Для просмотра расписания вы должны быть участником группы</string>
 </resources>

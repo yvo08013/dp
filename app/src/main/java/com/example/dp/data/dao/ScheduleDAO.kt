@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.dp.data.model.AbsenceEntity
+import com.example.dp.data.model.AttendanceEntity
 import com.example.dp.data.model.SubjectEntity
 import com.example.dp.data.model.SubjectMetadataEntity
 import com.example.dp.data.model.TeacherMetadataEntity
@@ -37,7 +38,19 @@ interface ScheduleDAO {
     suspend fun createSubject(subject: SubjectEntity): Long
 
     @Insert(onConflict = OnConflictStrategy.ABORT)
-    suspend fun createAbsence(subject: AbsenceEntity): Long
+    suspend fun createSubjects(subjects: List<SubjectEntity>)
+
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun createAbsence(absence: AbsenceEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun createAbsences(absences: List<AbsenceEntity>)
+
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun createAttendance(attendance: AttendanceEntity): Long
+
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun createAttendances(attendances: List<AttendanceEntity>)
 
     @Query(
         "SELECT * FROM ${AbsenceEntity.TABLE_NAME} WHERE " +

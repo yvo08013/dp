@@ -26,6 +26,9 @@ data class SubjectPOJO(
     @ColumnInfo(name = SubjectEntity.Columns.DATE)
     val date: Long,
 
+    @ColumnInfo(name = SubjectEntity.Columns.DAY_SCHEDULE_ORDER)
+    val dayScheduleOrder: Long,
+
     @ColumnInfo(name = SubjectEntity.Columns.ACTIVITY_TYPE)
     val activityType: Int,
 
