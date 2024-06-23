@@ -26,6 +26,8 @@ class ScheduleViewModel @Inject constructor(
     private val prefUtils: PrefUtils
 ) : ViewModel() {
 
+    var targetDate: Long = System.currentTimeMillis()
+
     private val _selectedDate = MutableSharedFlow<Long>(
         replay = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST
     )
@@ -70,6 +72,7 @@ class ScheduleViewModel @Inject constructor(
 
     fun onDateSelected(date: Long) {
         viewModelScope.launch {
+            targetDate = date
             _selectedDate.emit(date)
         }
     }

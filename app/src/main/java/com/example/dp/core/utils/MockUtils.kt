@@ -15,8 +15,8 @@ import java.time.ZoneId
 import javax.inject.Inject
 
 
-const val semesterStartDate = 1711918800000
-const val semesterEndDate = 1722459600000
+const val semesterStartDate = 1713128400000
+const val semesterEndDate = 1723669200000
 
 class AssetProvider @Inject constructor(private val context: Context) {
 

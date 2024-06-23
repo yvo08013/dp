@@ -34,9 +34,11 @@ class HomeViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             withContext((Dispatchers.IO)) {
-                _usersList.emit(userDAO.getUsersPOJO("").map {
-                    it.toUIModel()
-                })
+                _usersList.emit(
+                    userDAO.getUsersPOJO("").map {
+                        it.toUIModel()
+                    }
+                )
             }
         }
     }

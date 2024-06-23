@@ -25,7 +25,8 @@ class ScheduleFragment : BaseFragment<FragmentScheduleBinding>(
     override fun initUI() {
         binding.calendarView.minDate = semesterStartDate
         binding.calendarView.maxDate = semesterEndDate
-        viewModel.onDateSelected(System.currentTimeMillis())
+        binding.calendarView.date = viewModel.targetDate
+        viewModel.onDateSelected(viewModel.targetDate)
         binding.calendarView.setOnDateChangeListener { calendarView, year, month, dayOfMonth ->
             val calendar = Calendar.Builder().setDate(year, month, dayOfMonth).build()
             binding.weekType.text = when (calendar.get(Calendar.WEEK_OF_YEAR) % 2) {
